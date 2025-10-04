@@ -1,0 +1,198 @@
+﻿{
+  "Anatomie": [
+    {
+      "Id": 1,
+      "Question": "Le muscle assurant principalement l'ouverture palpébrale est",
+      "Choices": {
+        "A": "le releveur de la paupière supérieure",
+        "B": "le muscle de Müller",
+        "C": "le muscle frontal",
+        "D": "le muscle orbiculaire"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 2,
+      "Question": "Les paupières assurent:",
+      "Choices": {
+        "A": "la protection des yeux",
+        "B": "la protection de la rétine contre l'éblouissement",
+        "C": "l'humidification de la cornée",
+        "D": "tout est juste"
+      },
+      "Answer": "D"
+    },
+    {
+      "Id": 3,
+      "Question": "Le muscle assurant principalement la fermeture des paupières est",
+      "Choices": {
+        "A": "le releveur de la paupière supérieure",
+        "B": "le muscle de Müller",
+        "C": "le muscle frontal",
+        "D": "le muscle orbiculaire"
+      },
+      "Answer": "D"
+    },
+    {
+      "Id": 4,
+      "Question": "Quelles modifications anatomiques apparaissent avec le temps?",
+      "Choices": {
+        "A": "perte du tonus palpébral",
+        "B": "diminution de l'élasticité de la peau palpébrale",
+        "C": "diminution des graisses orbitaires",
+        "D": "a + b",
+        "E": "a + c",
+        "F": "a + b + c"
+      },
+      "Answer": "D"
+    },
+    {
+      "Id": 5,
+      "Question": "Lors de tout clignement, la norme est une rotation du globe oculaire de 10 à 15°:",
+      "Choices": {
+        "A": "vers le haut",
+        "B": "vers le bas",
+        "C": "vers la gauche du sujet",
+        "D": "vers la droite du sujet"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 6,
+      "Question": "La longueur axiale normale d'un oeil adulte emmétrope est de:",
+      "Choices": {
+        "A": "20 mm",
+        "B": "24 mm",
+        "C": "26 mm",
+        "D": "28 mm"
+      },
+      "Answer": "B"
+    },
+    {
+      "Id": 7,
+      "Question": "La partie postérieure du bord libre contient:",
+      "Choices": {
+        "A": "les orifices des glandes de Meibomius",
+        "B": "les orifices des glandes de Zeiss",
+        "C": "les orifices des glandes de Moll",
+        "D": "les cils",
+        "E": "a + d"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 8,
+      "Question": "Les glandes de Meibomius assurent:",
+      "Choices": {
+        "A": "la sécrétion aqueuse du film lacrymal",
+        "B": "la sécrétion de l'humeur aqueuse",
+        "C": "la sécrétion mucinique du film lacrymal",
+        "D": "la sécrétion lipidique du film lacrymal"
+      },
+      "Answer": "D"
+    },
+    {
+      "Id": 9,
+      "Question": "Le tarse de la paupière supérieure comprend plus de glandes de Meibomius que le tarse de la paupière inférieure:",
+      "Choices": {
+        "A": "vrai",
+        "B": "faux"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 10,
+      "Question": "La sécrétion séreuse du film lacrymal est assurée par:",
+      "Choices": {
+        "A": "la glande lacrymale principale",
+        "B": "les glandes de Meibomius",
+        "C": "les glandes de Krause et Wolfring",
+        "D": "les glandes de Henle et les cellules à gobelets",
+        "E": "a + c",
+        "F": "a + b + c"
+      },
+      "Answer": "E"
+    },
+    {
+      "Id": 11,
+      "Question": "La glande lacrymale principale se situe sous le rebord:",
+      "Choices": {
+        "A": "supéro-externe",
+        "B": "supéro-interne",
+        "C": "inféro-externe",
+        "D": "inféro-interne"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 12,
+      "Question": "La sécrétion mucinique du film lacrymal est assurée par:",
+      "Choices": {
+        "A": "la glande lacrymale principale",
+        "B": "les glandes de Meibomius",
+        "C": "les glandes de Krause et Wolfring",
+        "D": "les glandes de Henle et les cellules à gobelets",
+        "E": "a + c",
+        "F": "a + c + d"
+      },
+      "Answer": "D"
+    },
+    {
+      "Id": 13,
+      "Question": "Les glandes séreuses et sébacées des paupières sont des glandes:",
+      "Choices": {
+        "A": "endocrines",
+        "B": "exocrines",
+        "C": "a + b",
+        "D": "tout est faux"
+      },
+      "Answer": "B"
+    },
+    {
+      "Id": 14,
+      "Question": "Le film lacrymal est composé de:",
+      "Choices": {
+        "A": "immunoglobulines",
+        "B": "vitamines",
+        "C": "protéines",
+        "D": "bicarbonates et carbonates",
+        "E": "tout sauf la d",
+        "F": "a + b + c + d"
+      },
+      "Answer": "F"
+    },
+    {
+      "Id": 15,
+      "Question": "Les méats lacrymaux sont situés:",
+      "Choices": {
+        "A": "sur le bord libre supérieur et inférieur, à l'angle interne",
+        "B": "sur le bord libre supérieur et inférieur, à l'angle externe",
+        "C": "uniquement sur le bord libre inférieur, à l'angle interne",
+        "D": "uniquement sur le bord libre supérieur, à l'angle externe"
+      },
+      "Answer": "A"
+    },
+    {
+      "Id": 16,
+      "Question": "Je suis un canal osseux avec une longueur de 12 à 15mm, je suis:",
+      "Choices": {
+        "A": "le sac lacrymal",
+        "B": "les canalicules lacrymaux",
+        "C": "le canal lacrymo-nasal",
+        "D": "tout est faux"
+      },
+      "Answer": "C"
+    },
+    {
+      "Id": 17,
+      "Question": "Remettez les éléments dans le bon ordre d'écoulement:",
+      "Choices": {
+        "A": "glande lacrymale / méats lacrymaux / sac lacrymal / canalicules lacrymaux / canal lacrymo-nasal",
+        "B": "glande lacrymale / méats lacrymaux / canal lacrymo-nasal / canalicules lacrymaux / sac lacrymal",
+        "C": "glande lacrymale / méats lacrymaux / canalicules lacrymaux / sac lacrymal / canal lacrymo-nasal",
+        "D": "glande lacrymale / méats lacrymaux / canalicules lacrymaux / canal lacrymo-nasal / sac lacrymal"
+      },
+      "Answer": "C"
+    }
+  ]
+}
