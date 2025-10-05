@@ -63,3 +63,4 @@ yarn-error.log*
 next-env.d.ts
 LICENSE
 README.md
+/frontend/frontend.iml
