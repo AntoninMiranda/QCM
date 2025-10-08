@@ -7,18 +7,16 @@ import { getData } from "@/api";
 import { Card, CardHeader, CardTitle, CardContent, CardAction, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-
-function QuestionModule({ question, selected, setSelected, validated, onValidate, onNext }: {
+function QuestionModule({ question, selected, setSelected, validated, index }: {
     question: any;
     selected: string | null;
-    setSelected: (key: string) => void;
+    setSelected: (index: number, key: string) => void;
     validated: boolean;
-    onValidate: () => void;
-    onNext: () => void;
+    index: number;
 }) {
     if (!question) return <Card><CardContent>Aucune question</CardContent></Card>;
     return (
-        <Card className="w-full max-w-xl min-w-[350px] min-h-[400px] flex flex-col justify-between">
+        <Card className="w-full max-w-xl min-w-[350px] mb-4">
             <CardHeader>
                 <h2 className="text-lg font-bold">{question.question}</h2>
             </CardHeader>
@@ -35,7 +33,7 @@ function QuestionModule({ question, selected, setSelected, validated, onValidate
                         <Button
                             key={key}
                             variant={variant}
-                            onClick={() => !validated && setSelected(key)}
+                            onClick={() => !validated && setSelected(index, key)}
                             className={validated ? "pointer-events-none" : ""}
                         >
                             {key} : {String(value)}
@@ -43,16 +41,44 @@ function QuestionModule({ question, selected, setSelected, validated, onValidate
                     );
                 })}
             </CardAction>
+        </Card>
+    );
+}
+
+function QcmModule({ questions, selectedAnswers, setSelectedAnswer, validated, onValidate, onNext }: {
+    questions: any[];
+    selectedAnswers: (string | null)[];
+    setSelectedAnswer: (index: number, key: string) => void;
+    validated: boolean;
+    onValidate: () => void;
+    onNext: () => void;
+}) {
+    const allQuestionsAnswered = selectedAnswers.every(answer => answer !== null);
+
+    return (
+        <Card className="w-full max-w-xl min-w-[350px] flex flex-col justify-between">
+            <CardContent className="pt-6">
+                {questions.map((question, index) => (
+                    <QuestionModule
+                        key={index}
+                        question={question}
+                        selected={selectedAnswers[index]}
+                        setSelected={setSelectedAnswer}
+                        validated={validated}
+                        index={index}
+                    />
+                ))}
+            </CardContent>
             <CardFooter className="flex justify-end">
                 {validated ? (
                     <Button variant="default" onClick={onNext}>
-                        Question suivante
+                        Page suivante
                     </Button>
                 ) : (
                     <Button
                         variant="default"
                         onClick={onValidate}
-                        disabled={!selected}
+                        disabled={!allQuestionsAnswered}
                     >
                         Valider
                     </Button>
@@ -62,10 +88,11 @@ function QuestionModule({ question, selected, setSelected, validated, onValidate
     );
 }
 
-function ResultModule( { result, handleRestart }: {
+function ResultModule({ result, handleRestart }: {
     result: { score: number; total: number };
     handleRestart: () => void
 }) {
+    // Le reste du code reste inchangé
     const router = useRouter();
 
     return (
@@ -92,10 +119,10 @@ function ResultModule( { result, handleRestart }: {
 }
 
 function QcmPageContent() {
-    const [data, setData] = useState<any[]>([]);
+    const [data, setData] = useState<any[][]>([]);
     const [error, setError] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [selected, setSelected] = useState<string | null>(null);
+    const [selectedAnswers, setSelectedAnswers] = useState<(string | null)[]>([]);
     const [validated, setValidated] = useState(false);
     const [result, setResult] = useState<{ score: number; total: number }>({ score: 0, total: 0 });
     const [showResult, setShowResult] = useState(false);
@@ -112,10 +139,22 @@ function QcmPageContent() {
         getData(parameter)
             .then((res) => setData(res))
             .catch((err) => setError(err.message));
-    }, [qcmCount]);
+    }, [qcmType, qcmCategory, qcmCount]);
+
     useEffect(() => {
-        setResult({ score: 0, total: Number(data.length) });
-    }, [data]);
+        if (data.length > 0 && data[currentIndex]) {
+            setSelectedAnswers(new Array(data[currentIndex].length).fill(null));
+            setValidated(false);
+        }
+    }, [data, currentIndex]);
+
+    const handleSetSelected = (index: number, value: string) => {
+        setSelectedAnswers(prev => {
+            const newAnswers = [...prev];
+            newAnswers[index] = value;
+            return newAnswers;
+        });
+    };
 
     const nextQuestion = () => {
         if (currentIndex + 1 >= data.length) {
@@ -124,43 +163,56 @@ function QcmPageContent() {
             setCurrentIndex((prev) => prev + 1);
         }
     };
+
     const handleValidate = () => {
         setValidated(true);
-        if (selected === data[currentIndex].answer) {
-            setResult(prev => ({ score: prev.score + 1, total: prev.total }));
-        }
+        let correctAnswers = 0;
+
+        data[currentIndex].forEach((question, index) => {
+            if (selectedAnswers[index] === question.answer) {
+                correctAnswers++;
+            }
+        });
+
+        setResult(prev => ({
+            score: prev.score + correctAnswers,
+            total: prev.total
+        }));
     };
+
     const handleNext = () => {
         setValidated(false);
-        setSelected(null);
         nextQuestion();
     };
+
     const handleRestart = () => {
         setShowResult(false);
         setCurrentIndex(0);
-        setSelected(null);
+        setSelectedAnswers([]);
         setValidated(false);
-        setResult({ score: 0, total: Number(qcmCount) });
+        setResult({ score: 0, total: data.flat().length });
     };
 
     return (
         <div className="flex items-center justify-center min-h-screen">
             <div>
                 {error && <p>Erreur: {error}</p>}
-                {!showResult ? (
-                    <QuestionModule
-                        question={data[currentIndex]}
-                        selected={selected}
-                        setSelected={setSelected}
+                {!showResult && data.length > 0 && data[currentIndex] ? (
+                    <QcmModule
+                        questions={data[currentIndex]}
+                        selectedAnswers={selectedAnswers}
+                        setSelectedAnswer={handleSetSelected}
                         validated={validated}
                         onValidate={handleValidate}
                         onNext={handleNext}
                     />
-                ) : (
+                ) : showResult ? (
                     <ResultModule
                         result={result}
                         handleRestart={handleRestart}
                     />
+                ) : (
+                    <Card><CardContent>Chargement des questions...</CardContent></Card>
                 )}
             </div>
         </div>
