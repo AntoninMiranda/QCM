@@ -1,24 +1,38 @@
-﻿[
-  {
-    "Id": 1,
-    "Question": "Quelle est la capitale de la France ?",
-    "Choices": {
-      "A": "Paris",
-      "B": "Londres",
-      "C": "Berlin",
-      "D": "Madrid"
-    },
-    "Answer": "A"
-  },
-  {
-    "Id": 2,
-    "Question": "Combien font 2+2 ?",
-    "Choices": {
-      "A": "3",
-      "B": "4",
-      "C": "5",
-      "D": "6"
-    },
-    "Answer": "B"
-  }
-]
+﻿{
+  "Exemple catégorie": [
+    [
+      {
+        "Id": 1,
+        "Question": "Quelle est la couleur du ciel ?",
+        "Choices": {
+          "A": "Bleu",
+          "B": "Vert",
+          "C": "Rouge"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 2,
+        "Question": "Quelle est la couleur du ciel ?",
+        "Choices": {
+          "A": "Bleu",
+          "B": "Vert",
+          "C": "Rouge"
+        },
+        "Answer": "A"
+      },
+      {
+        "Id": 3,
+        "Question": "Combien font 2 + 2 ?",
+        "Choices": {
+          "A": "3",
+          "B": "4",
+          "C": "5"
+        },
+        "Answer": "B"
+      }
+    ]
+  ]
+}
