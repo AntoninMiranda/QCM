@@ -34,13 +34,17 @@ function QuestionModule({ question, selected, setSelected, validated, index }: {
                             key={key}
                             variant={variant}
                             onClick={() => !validated && setSelected(index, key)}
-                            className={validated ? "pointer-events-none" : ""}
+                            className={`w-full text-left flex justify-start items-center break-words whitespace-normal h-auto py-2 ${validated ? "pointer-events-none" : ""}`}
                         >
-                            {key} : {String(value)}
+                            <span className="mr-2">{key} :</span>
+                            <span className="flex-grow">{String(value)}</span>
                         </Button>
                     );
                 })}
             </CardAction>
+            <CardFooter>
+                {question.id && <span className="text-sm text-gray-500">{question.id}</span>}
+            </CardFooter>
         </Card>
     );
 }
@@ -143,7 +147,7 @@ function QcmPageContent() {
 
     useEffect(() => {
         if (data.length > 0 && data[currentIndex]) {
-            setResult({ score: 0, total: data.flat().length });
+            setResult({ score: result.score, total: data.flat().length });
             setSelectedAnswers(new Array(data[currentIndex].length).fill(null));
             setValidated(false);
         }
