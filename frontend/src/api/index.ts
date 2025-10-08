@@ -1,5 +1,5 @@
 // src/api/index.ts
-const BASE_URL = 'http://api.mirandaandcie.fr';
+const BASE_URL = 'https://api.mirandaandcie.fr';
 // const BASE_URL = 'http://localhost:5000';
 
 export async function getData(parameter: string) {
