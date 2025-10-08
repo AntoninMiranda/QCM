@@ -78,7 +78,7 @@ function QcmModule({ questions, selectedAnswers, setSelectedAnswer, validated, o
                     <Button
                         variant="default"
                         onClick={onValidate}
-                        disabled={!allQuestionsAnswered}
+                        // disabled={!allQuestionsAnswered}
                     >
                         Valider
                     </Button>
@@ -143,6 +143,7 @@ function QcmPageContent() {
 
     useEffect(() => {
         if (data.length > 0 && data[currentIndex]) {
+            setResult({ score: 0, total: data.flat().length });
             setSelectedAnswers(new Array(data[currentIndex].length).fill(null));
             setValidated(false);
         }
