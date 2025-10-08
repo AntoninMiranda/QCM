@@ -1,198 +1,3406 @@
 ﻿{
   "Anatomie": [
-    {
-      "Id": 1,
-      "Question": "Le muscle assurant principalement l'ouverture palpébrale est",
-      "Choices": {
-        "A": "le releveur de la paupière supérieure",
-        "B": "le muscle de Müller",
-        "C": "le muscle frontal",
-        "D": "le muscle orbiculaire"
+    [
+      {
+        "Id": 1,
+        "Annexes": "",
+        "Question": "Le muscle assurant principalement l'ouverture palpébrale est",
+        "Choices": {
+          "A": "le releveur de la paupière supérieure",
+          "B": "le muscle de Müller",
+          "C": "le muscle frontal",
+          "D": "le muscle orbiculaire"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 2,
+        "Annexes": "",
+        "Question": "Les paupières assurent:",
+        "Choices": {
+          "A": "la protection des yeux",
+          "B": "la protection de la rétine contre l'éblouissement",
+          "C": "l'humIdification de la cornée",
+          "D": "tout est juste"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 3,
+        "Annexes": "",
+        "Question": "Le muscle assurant principalement la fermeture des paupières est",
+        "Choices": {
+          "A": "le releveur de la paupière supérieure",
+          "B": "le muscle de Müller",
+          "C": "le muscle frontal",
+          "D": "le muscle orbiculaire"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 4,
+        "Annexes": "",
+        "Question": "Quelles modifications anatomiques apparaissent avec le temps ?",
+        "Choices": {
+          "A": "perte du tonus palpébral",
+          "B": "diminution de l'élasticité de la peau palpébrale",
+          "C": "diminution des graisses orbitaires",
+          "D": "a + b",
+          "E": "a + c",
+          "F": "a + b + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 5,
+        "Annexes": "",
+        "Question": "Lors de tout clignement, la norme est une rotation du globe oculaire de 10 à 15° :",
+        "Choices": {
+          "A": "vers le haut",
+          "B": "vers le bas",
+          "C": "vers la gauche du sujet",
+          "D": "vers la droite du sujet"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 6,
+        "Annexes": "",
+        "Question": "La longueur axiale « normale » d'un œil adulte, emmétrope, est de :",
+        "Choices": {
+          "A": "20 mm",
+          "B": "24 mm",
+          "C": "26 mm",
+          "D": "28 mm"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 7,
+        "Annexes": "",
+        "Question": "La partie postérieure du bord libre contient :",
+        "Choices": {
+          "A": "les orifices des glandes de Meibomius",
+          "B": "les orifices des glandes de Zeiss",
+          "C": "les orifices des glandes de Moll",
+          "D": "les cils",
+          "E": "a + d"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 8,
+        "Annexes": "",
+        "Question": "Les glandes de Meibomius assurent :",
+        "Choices": {
+          "A": "la sécrétion aqueuse du film lacrymal",
+          "B": "la sécrétion de l'humeur aqueuse",
+          "C": "la sécrétion mucinique du film lacrymal",
+          "D": "la sécrétion lipIdique du film lacrymal"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 9,
+        "Annexes": "",
+        "Question": "Le tarse de la paupière supérieure comprend plus de glandes de Meibomius que le tarse de la paupière inférieure :",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 10,
+        "Annexes": "",
+        "Question": "La sécrétion séreuse du film lacrymal est assurée par :",
+        "Choices": {
+          "A": "la glande lacrymale principale",
+          "B": "les glandes de Meibomius",
+          "C": "les glandes de Krause et Wolfring",
+          "D": "les glandes de Henle et les cellules à gobelets",
+          "E": "a + c",
+          "F": "a + b + c"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 11,
+        "Annexes": "",
+        "Question": "Les glandes de Zeiss et Moll participent à la sécrétion lipIdique du film lacrymal :",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 12,
+        "Annexes": "",
+        "Question": "La glande lacrymale principale est située :",
+        "Choices": {
+          "A": "dans l’angle supéro-externe de l’orbite",
+          "B": "dans l’angle inféro-interne de l’orbite",
+          "C": "dans l’angle supéro-interne de l’orbite",
+          "D": "dans l’angle inféro-externe de l’orbite"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 13,
+        "Annexes": "",
+        "Question": "Les glandes de Krause et de Wolfring participent à la sécrétion :",
+        "Choices": {
+          "A": "lipIdique",
+          "B": "mucinique",
+          "C": "aqueuse",
+          "D": "aucune de ces réponses"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 14,
+        "Annexes": "",
+        "Question": "Les glandes de Henle et les cellules à gobelets participent à la sécrétion :",
+        "Choices": {
+          "A": "lipIdique",
+          "B": "mucinique",
+          "C": "aqueuse",
+          "D": "aucune de ces réponses"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 15,
+        "Annexes": "",
+        "Question": "La caroncule lacrymale contient :",
+        "Choices": {
+          "A": "des follicules pileux",
+          "B": "des glandes sébacées",
+          "C": "des glandes sudoripares",
+          "D": "toutes ces réponses"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 16,
+        "Annexes": "",
+        "Question": "Les points lacrymaux sont situés :",
+        "Choices": {
+          "A": "au sommet des papilles lacrymales",
+          "B": "au centre des caroncules",
+          "C": "à la jonction du bord libre palpébral antérieur et postérieur",
+          "D": "dans le cul-de-sac conjonctival"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 17,
+        "Annexes": "",
+        "Question": "Le canalicule lacrymal supérieur :",
+        "Choices": {
+          "A": "mesure environ 10 mm",
+          "B": "mesure environ 5 mm",
+          "C": "communique avec le canalicule inférieur",
+          "D": "aboutit au sac lacrymal"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 18,
+        "Annexes": "",
+        "Question": "Le sac lacrymal est situé :",
+        "Choices": {
+          "A": "en avant du ligament palpébral médial",
+          "B": "en arrière du ligament palpébral médial",
+          "C": "au-dessus du canal nasal",
+          "D": "aucune de ces réponses"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 19,
+        "Annexes": "",
+        "Question": "Le canal lacrymo-nasal s’ouvre dans :",
+        "Choices": {
+          "A": "le méat moyen",
+          "B": "le méat inférieur",
+          "C": "le méat supérieur",
+          "D": "la cavité buccale"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 20,
+        "Annexes": "",
+        "Question": "La conjonctive bulbaire recouvre :",
+        "Choices": {
+          "A": "la face antérieure de la cornée",
+          "B": "la face postérieure des paupières",
+          "C": "le blanc de l’œil (sclère)",
+          "D": "aucune de ces réponses"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 21,
+        "Annexes": "",
+        "Question": "La conjonctive tarsale est en continuité avec :",
+        "Choices": {
+          "A": "la conjonctive bulbaire",
+          "B": "la conjonctive palpébrale",
+          "C": "le cul-de-sac conjonctival",
+          "D": "toutes ces réponses"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 22,
+        "Annexes": "",
+        "Question": "La sclère est composée principalement de :",
+        "Choices": {
+          "A": "collagène",
+          "B": "tissu adipeux",
+          "C": "muscle lisse",
+          "D": "kératine"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 23,
+        "Annexes": "",
+        "Question": "L’épaisseur moyenne de la cornée au centre est de :",
+        "Choices": {
+          "A": "0,3 mm",
+          "B": "0,5 mm",
+          "C": "0,55 mm",
+          "D": "0,8 mm"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 24,
+        "Annexes": "",
+        "Question": "La cornée est avasculaire :",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 25,
+        "Annexes": "",
+        "Question": "La transparence cornéenne est assurée par :",
+        "Choices": {
+          "A": "l’absence de vaisseaux",
+          "B": "l’organisation régulière du collagène",
+          "C": "le maintien de son hydratation",
+          "D": "toutes ces réponses"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 26,
+        "Annexes": "",
+        "Question": "L’innervation de la cornée dépend du :",
+        "Choices": {
+          "A": "nerf facial",
+          "B": "nerf oculomoteur",
+          "C": "nerf trijumeau",
+          "D": "nerf optique"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 27,
+        "Annexes": "",
+        "Question": "Le nerf optique contient :",
+        "Choices": {
+          "A": "les fibres sensitives de la cornée",
+          "B": "les fibres motrices des muscles oculaires",
+          "C": "les axones des cellules ganglionnaires de la rétine",
+          "D": "les fibres parasympathiques pour la pupille"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 28,
+        "Annexes": "",
+        "Question": "Le nerf optique est entouré de méninges :",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 29,
+        "Annexes": "",
+        "Question": "La papille optique correspond :",
+        "Choices": {
+          "A": "à l’entrée du nerf optique dans l’œil",
+          "B": "à la zone de meilleure acuité visuelle",
+          "C": "à la macula",
+          "D": "à la fovéa"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 30,
+        "Annexes": "",
+        "Question": "La macula est :",
+        "Choices": {
+          "A": "la région de la vision périphérique",
+          "B": "la région de la vision centrale",
+          "C": "la zone d’entrée du nerf optique",
+          "D": "la zone de passage des vaisseaux rétiniens"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 31,
+        "Annexes": "",
+        "Question": "L'épithélium cornéen a un turn-over de :",
+        "Choices": {
+          "A": "3 jours",
+          "B": "7 jours",
+          "C": "14 jours",
+          "D": "30 jours"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 32,
+        "Annexes": "",
+        "Question": "Quelle structure de la cornée ne peut pas se régénérer ?",
+        "Choices": {
+          "A": "l'épithélium cornéen",
+          "B": "la membrane de Bowman",
+          "C": "l'endothélium cornéen",
+          "D": "b + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 33,
+        "Annexes": "",
+        "Question": "Placez les différentes couches de la cornée dans l'ordre, en commençant par la face antérieure.",
+        "Choices": {
+          "A": "épithélium/stroma/bowman/endothélium/descemet",
+          "B": "épithélium/bowman/stroma/descemet/endothélium",
+          "C": "épithélium/bowman/endothélium/stroma/descemet",
+          "D": "épithélium/descemet/stroma/bowman/endothélium"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 34,
+        "Annexes": "",
+        "Question": "Chez le nouveau-né, la densité de l'endothélium cornéen est d'environ :",
+        "Choices": {
+          "A": "500 à 1500/mm2",
+          "B": "1500 à 2500/mm2",
+          "C": "2500 à 3500/mm2",
+          "D": "3500 à 4000/mm2"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 35,
+        "Annexes": "",
+        "Question": "Quelle proposition est fausse ?",
+        "Choices": {
+          "A": "la sécrétion de l'humeur aqueuse est constante",
+          "B": "l'humeur aqueuse est sécrétée dans la chambre postérieure",
+          "C": "la voie trabéculaire permet l'évacuation de l'humeur aqueuse",
+          "D": "la voie uvéosclérale permet l'évacuation de l'humeur aqueuse"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 36,
+        "Annexes": "",
+        "Question": "La sécrétion de l'humeur aqueuse se fait :",
+        "Choices": {
+          "A": "par la glande lacrymale principale",
+          "B": "par les glandes de Meibomius",
+          "C": "par l'épithélium ciliaire",
+          "D": "par les glandes de Manz et Henle"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 37,
+        "Annexes": "",
+        "Question": "Quelle caractéristique ne fait pas partie de la composition de l'humeur aqueuse ?",
+        "Choices": {
+          "A": "sodium",
+          "B": "glucose",
+          "C": "protéine",
+          "D": "les trois propositions en font partie"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 38,
+        "Annexes": "",
+        "Question": "La ligne de Schwalbe est une condensation de :",
+        "Choices": {
+          "A": "la membrane de Descemet",
+          "B": "l'épithélium cornéen",
+          "C": "l'éperon scléral",
+          "D": "la sclère"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 39,
+        "Annexes": "",
+        "Question": "Quelle proposition est juste ?",
+        "Choices": {
+          "A": "le muscle sphincter de l’iris permet la dilatation de la pupille",
+          "B": "le muscle sphincter de l’iris est innervé par le système sympathique",
+          "C": "la coloration de l’iris dépend de la pigmentation du stroma et de l’épaisseur de l’épithélium pigmentaire postérieur",
+          "D": "l’iris n’a pas de stroma"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 40,
+        "Annexes": "",
+        "Question": "En condition photopique, pour des yeux sains, la taille des pupilles sera :",
+        "Choices": {
+          "A": "plus petite",
+          "B": "plus grande",
+          "C": "il n’y aura pas de différence"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 41,
+        "Annexes": "",
+        "Question": "Trouvez la bonne réponse :",
+        "Choices": {
+          "A": "le système irIdo-constricteur est déclenché par le muscle sphincter irien, muscle lisse circonférentiel de l’iris",
+          "B": "le système irIdo-constricteur est déclenché par un muscle lisse radiaire de l’iris",
+          "C": "le système irIdo-dilatateur est contrôlé par le système parasympathique",
+          "D": "le système irIdo-dilatateur est contrôlé par le système sympathique via le nerf oculomoteur commun (III)"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 42,
+        "Annexes": "",
+        "Question": "Qui ne fait pas partie du segment antérieur de l’œil ?",
+        "Choices": {
+          "A": "le cristallin",
+          "B": "la cornée",
+          "C": "le vitré",
+          "D": "le limbe"
+        },
+        "Answer": "C"
+      }
+    ]
+  ],
+  "Ananmnèse en contactologie": [
+    [
+      {
+        "Id": 43,
+        "Annexes": "",
+        "Question": "L'anamnèse doit se dérouler avec :",
+        "Choices": {
+          "A": "majoritairement des questions fermées.",
+          "B": "des mots techniques pour installer un climat de confiance avec le sujet.",
+          "C": "avec un regard empathique et compréhensif envers le sujet.",
+          "D": "A + C"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 44,
+        "Annexes": "",
+        "Question": "Connaitre la santé générale du sujet va surtout être important :",
+        "Choices": {
+          "A": "pour éviter les complications allergiques.",
+          "B": "pour définir la géométrie de la lentille.",
+          "C": "pour définir correctement la puissance de la lentille.",
+          "D": "il n'est pas primordial de connaitre la santé générale du sujet."
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 45,
+        "Annexes": "",
+        "Question": "Quelle information n'est pas utile pour définir les besoins visuels du sujet en contactologie ?",
+        "Choices": {
+          "A": "la distance de travail.",
+          "B": "sa profession.",
+          "C": "ses heures de sommeil.",
+          "D": "toutes les informations peuvent être utiles.",
+          "E": "A + C"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 46,
+        "Annexes": "",
+        "Question": "Durant l'anamnèse, votre sujet vous dit percevoir des petits points noirs dans son champ de vision qui bouge dès qu'il bouge son œil. Vous pensez :",
+        "Choices": {
+          "A": "myodésopsies.",
+          "B": "métamorphopsies.",
+          "C": "asthénopie.",
+          "D": "décollement de rétine."
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 47,
+        "Annexes": "",
+        "Question": "La réponse ci-dessus est donc :",
+        "Choices": {
+          "A": "une contre-indication aux lentilles rigides.",
+          "B": "une contre-indication aux lentilles souples.",
+          "C": "une contre-indication aux lentilles ioniques.",
+          "D": "aucune contre-indication."
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 48,
+        "Annexes": "",
+        "Question": "Quel élément peut être responsable d'hyposécrétion lacrymale ?",
+        "Choices": {
+          "A": "antiacnéique.",
+          "B": "antihistaminique.",
+          "C": "bêtabloquant.",
+          "D": "tous."
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 49,
+        "Annexes": "",
+        "Question": "Votre sujet vous dit avoir les yeux secs, aucune pathologie n'a été dépistée.",
+        "Choices": {
+          "A": "contre-indication, le port de lentilles n'est pas possible pour le sujet.",
+          "B": "vous réalisez les examens complémentaires et une biomicroscopie pour définir si la réalisation est possible ou non.",
+          "C": "l'œil sec n'est pas une contre-indication si le port de lentilles est prolongé.",
+          "D": "l'œil sec est un terme utilisé pour tout et rien, vous adaptez votre sujet avec la première lentille d'essai qui est disponible dans votre stock."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 50,
+        "Annexes": "",
+        "Question": "Votre sujet a effectué un LASIK 10 ans avant, tout s'est très bien passé, aujourd'hui une petite myopie est présente, il veut des lentilles journalières.",
+        "Choices": {
+          "A": "contre-indication, pas de lentilles après une opération.",
+          "B": "pas de contre-indication pour l'instant."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 51,
+        "Annexes": "",
+        "Question": "Votre sujet revient d'une infection palpébrale qui n'est pas totalement résolue, elle n'a pas le temps la semaine prochaine alors elle veut commencer l'adaptation directement.",
+        "Choices": {
+          "A": "vous commencez l'adaptation, dans tous les cas l'infection palpébrale va se résorber.",
+          "B": "vous refusez l'adaptation et reprogrammez un rendez-vous malgré le mécontentement du sujet."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 52,
+        "Annexes": "",
+        "Question": "Votre sujet veut porter des lentilles pour le basketball uniquement, à fréquence de 2x par semaine, vous lui préconiserez :",
+        "Choices": {
+          "A": "des lentilles souples journalières jetables.",
+          "B": "des lentilles souples mensuelles.",
+          "C": "une lentille rigide pour un meilleur centrage.",
+          "D": "A + B"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 53,
+        "Annexes": "",
+        "Question": "Dans quel cas serons-nous susceptible de refuser une adaptation en LRPG ?",
+        "Choices": {
+          "A": "une profession dans un milieu climatisé.",
+          "B": "une présence de maladie auto-immune.",
+          "C": "sujet présentant des allergies saisonnières.",
+          "D": "en présence d'une vascularisation limbique grade 2."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 54,
+        "Annexes": "",
+        "Question": "Dans quel cas serons-nous susceptible de refuser une adaptation en lentille souple mensuelle ?",
+        "Choices": {
+          "A": "un astigmatisme de 1.75Dc régulier.",
+          "B": "en présence d'une vascularisation limbique grade 1.",
+          "C": "en présence d'un sujet non hygiénique.",
+          "D": "en présence d'allergies saisonnières."
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 55,
+        "Annexes": "",
+        "Question": "La motivation du sujet est un facteur à prendre en compte lors d'une adaptation lentilles.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 56,
+        "Annexes": "",
+        "Question": "Les LRPG sont à privilégiées dans des environnements poussiéreux.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 57,
+        "Annexes": "",
+        "Question": "Un médecin généraliste a inquiété un patient en lui disant qu'il avait un gérontoxon. Quelle est l'origine du gérontoxon ?",
+        "Choices": {
+          "A": "une infiltration lipidique du stroma cornéen périphérique, plus fréquent chez les personnes ayant du cholestérol.",
+          "B": "une infiltration lipidique du stroma cornéen périphérique, plus fréquent chez les personnes ayant du diabète.",
+          "C": "des dépôts calcaires dans la couche de Bowman associés à une inflammation chronique de la surface oculaire, plus fréquent chez les personnes ayant du cholestérol.",
+          "D": "des dépôts calcaires dans la couche de Bowman associés à une inflammation chronique de la surface oculaire, plus fréquent chez les personnes ayant du diabète."
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 58,
+        "Annexes": "",
+        "Question": "Un gérontoxon est une contre-indication au port de LDC.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ]
+  ],
+  "Biométrie et modélisation cornéenne": [
+    [
+      {
+        "Id": 59,
+        "Annexes": "",
+        "Question": "La biométrie oculaire est un examen qui comprend :",
+        "Choices": {
+          "A": "les rayons de courbures cornéens.",
+          "B": "la longueur axiale de l'oeil.",
+          "C": "la profondeur de la chambre antérieure.",
+          "D": "toutes les réponses sont justes.",
+          "E": "toutes les réponses sont fausses."
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 60,
+        "Annexes": "",
+        "Question": "L'inclinaison des canthi peut avoir une influence sur la rotation de la LDC.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 61,
+        "Annexes": "",
+        "Question": "La paupière pousse la lentille vers le bas proportionnellement :",
+        "Choices": {
+          "A": "au tonus.",
+          "B": "à l'épaisseur de la lentille.",
+          "C": "au dégagement au bord.",
+          "D": "tout est juste"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 62,
+        "Annexes": "",
+        "Question": "Le tonus palpébral va vous permettre d'anticiper :",
+        "Choices": {
+          "A": "la mouillabilité de la lentille.",
+          "B": "la déshydratation de la lentille.",
+          "C": "la dynamique de la lentille.",
+          "D": "A + B"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 63,
+        "Annexes": "",
+        "Question": "L'appréciation du tonus se fait :",
+        "Choices": {
+          "A": "avec la notation faible/moyen/fort.",
+          "B": "avec la notation rapide/standard/lent",
+          "C": "grâce à l'expérience de l'examinateur.",
+          "D": "A + C",
+          "E": "B + C"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 64,
+        "Annexes": "",
+        "Question": "Pour le profil cornéo-scléral, (P.C.S.) selon la classification de Meier, il n'y a pas de ressaut pour les profils :",
+        "Choices": {
+          "A": "1 à 4",
+          "B": "2 à 3",
+          "C": "1 à 2",
+          "D": "4 à 5"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 65,
+        "Annexes": "",
+        "Question": "Pour le P.C.S., un profil lent aura un aspect plutôt :",
+        "Choices": {
+          "A": "convexe",
+          "B": "concave"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 66,
+        "Annexes": "",
+        "Question": "La mesure du P.C.S peut être beaucoup plus intéressant pour les :",
+        "Choices": {
+          "A": "LSH",
+          "B": "LR cornéennes",
+          "C": "lentilles rigides à appuis scléral",
+          "D": "A + C",
+          "E": "A + B + C"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 67,
+        "Annexes": "",
+        "Question": "Ø cornéen =",
+        "Choices": {
+          "A": "Øirien + 2 mm",
+          "B": "Øirien - 2 mm",
+          "C": "Øirien + 1,2 mm",
+          "D": "Øirien - 1,2 mm"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 68,
+        "Annexes": "",
+        "Question": "Votre collègue vous donne sa feuille de biométrie, il vient de réaliser les recouvrements cornéens des paupières. Il est écrit pour la paupière supérieure +2 et -1 pour la paupière inférieure.",
+        "Choices": {
+          "A": "la paupière supérieure recouvre une partie de la cornée en supérieure.",
+          "B": "la paupière inférieure recouvre une partie de la cornée en inférieure.",
+          "C": "la paupière inférieure recouvre plus la cornée, que la supérieure."
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 69,
+        "Annexes": "",
+        "Question": "Vous avez la mesure du diamètre cornéen vertical de 12 mm, vous mesurez le recouvrement cornéen des paupières, vous trouvez +2 en sup. et 0 en inf. L'ouverture palpebrale sera de :",
+        "Choices": {
+          "A": "12 mm",
+          "B": "10 mm",
+          "C": "14 mm",
+          "D": "on ne peut pas savoir"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 70,
+        "Annexes": "",
+        "Question": "Vous avez la mesure du diamètre cornéen vertical de 12 mm, vous mesurez le recouvrement cornéen des paupières, vous trouvez 0 en sup. et -1 en inf. L'ouverture palpébrale sera de :",
+        "Choices": {
+          "A": "12 mm",
+          "B": "11 mm",
+          "C": "13 mm",
+          "D": "on ne peut pas savoir"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 71,
+        "Annexes": "",
+        "Question": "La taille et le positionnement de la pupille sont très importantes pour les adaptations en LDC, mais elle l'est d'autant plus pour :",
+        "Choices": {
+          "A": "l'adaptation des lentilles souples sphériques.",
+          "B": "l'adaptation des lentilles souples toriques.",
+          "C": "l'adaptation des lentilles souples multifocales."
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 72,
+        "Annexes": "",
+        "Question": "La lampe de Burton va vous permettre de mesurer la taille des pupilles en condition :",
+        "Choices": {
+          "A": "photopique",
+          "B": "scotopique",
+          "C": "uniquement en mésopique",
+          "D": "A + B"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 73,
+        "Annexes": "",
+        "Question": "La kératométrie est la mesure de la courbure (avec un Javal) :",
+        "Choices": {
+          "A": "de la face antérieure de la cornée à une portion cornéenne de 6/7mm.",
+          "B": "de la face antérieure de la cornée à une portion cornéenne de 2/3mm.",
+          "C": "de la face postérieure de la cornée à une portion cornéenne de 6/7mm.",
+          "D": "de la face postérieure de la cornée à une portion cornéenne de 2/3mm."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 74,
+        "Annexes": "",
+        "Question": "Le principe de kératométrie est basé sur le fait que :",
+        "Choices": {
+          "A": "la face antérieure de la cornée agit comme un miroir convexe.",
+          "B": "la face antérieure de la cornée agit comme un miroir concave.",
+          "C": "la face postérieure de la cornée agit comme un miroir convexe.",
+          "D": "la face postérieure de la cornée agit comme un miroir concave."
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 75,
+        "Annexes": "",
+        "Question": "Vous lisez une kératométrie OD: 7,60 à 0°/ 7,95 à 90° (Dist 3/4). Que signifie le « Dist 3/4 » ?",
+        "Choices": {
+          "A": "la distance du test",
+          "B": "le degré de distorsion des mires",
+          "C": "que le sujet accommode",
+          "D": "que la kératométrie est trop plate"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 76,
+        "Annexes": "",
+        "Question": "Lors de votre kératométrie de Sutcliff, vous remarquez des distorsions de mires. La cause pourrait être ?",
+        "Choices": {
+          "A": "un film lacrymal instable",
+          "B": "la cause d'un port de lentille rigide",
+          "C": "une taie cornéenne",
+          "D": "tout est possible"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 77,
+        "Annexes": "",
+        "Question": "Pendant la mesure de la kératométrie, celui-ci mesure l'image réfléchie par le film lacrymal, cette image est aussi appelée :",
+        "Choices": {
+          "A": "l'image de Purkinje n°1",
+          "B": "l'image de Purkinje n°2",
+          "C": "l'image de Purkinje n°3",
+          "D": "l'image de Purkinje n°4"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 78,
+        "Annexes": "",
+        "Question": "Une toricité de 0.35 mm correspond approximativement à un astigmatisme cornéen de :",
+        "Choices": {
+          "A": "0.75 Dc",
+          "B": "1.50 Dc",
+          "C": "1.75 Dc",
+          "D": "2.00 Dc"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 79,
+        "Annexes": "",
+        "Question": "Une toricité de 0.50 mm correspond approximativement à un astigmatisme cornéen de :",
+        "Choices": {
+          "A": "2.00 Dc",
+          "B": "2.50 Dc",
+          "C": "3.00 Dc",
+          "D": "3.50 Dc"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 80,
+        "Annexes": "",
+        "Question": "OG: 8,20 à 0°/ 7,75 à 90°. Quel est approximativement l'astigmatisme cornéen de l'OG ?",
+        "Choices": {
+          "A": "1.25 Dc",
+          "B": "2.00 Dc",
+          "C": "2.25 Dc",
+          "D": "2.50 Dc"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 81,
+        "Annexes": "",
+        "Question": "L'astigmatisme interne est normalement faible et en moyenne de :",
+        "Choices": {
+          "A": "0.25 Dc direct",
+          "B": "0.50 Dc direct",
+          "C": "0.25 Dc inverse",
+          "D": "0.50 Dc inverse"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 82,
+        "Annexes": "",
+        "Question": "L'astigmatisme interne est constitué de la combinaison :",
+        "Choices": {
+          "A": "la face antérieure de la cornée",
+          "B": "la face postérieure de la cornée",
+          "C": "les faces du cristallin",
+          "D": "la surface rétinienne",
+          "E": "a+b+c+d",
+          "F": "b+c+d",
+          "G": "c+d"
+        },
+        "Answer": "F"
+      }
+    ],
+    [
+      {
+        "Id": 83,
+        "Annexes": "",
+        "Question": "Sur un ticket d'autoref, R1 est défini comme le :",
+        "Choices": {
+          "A": "méridien le plus plat",
+          "B": "méridien le plus cambré"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 84,
+        "Annexes": "",
+        "Question": "Sur un ticket d'autoref, R2 est défini comme le :",
+        "Choices": {
+          "A": "méridien le plus plat",
+          "B": "méridien le plus cambré"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 85,
+        "Annexes": "",
+        "Question": "Astigmatisme total : (-2.00) 180°, l'astigmatisme cornéen : (-1.00)180°. Calculez l'astigmatisme interne, sachant que l'astigmatisme est régulier :",
+        "Choices": {
+          "A": "(-1.00) 180°",
+          "B": "(-1.00) 90°",
+          "C": "(-3.00)180°",
+          "D": "(-3.00)90°"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 86,
+        "Annexes": "",
+        "Question": "Astigmatisme total : (-0.75)90°, l'astigmatisme cornéen: (-1.00)180°. Calculez l'astigmatisme interne, sachant que l'astigmatisme est régulier :",
+        "Choices": {
+          "A": "(-0.25)90°",
+          "B": "(-0.25)180°",
+          "C": "(-1.75)180°",
+          "D": "(-1.75)90°"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 87,
+        "Annexes": "",
+        "Question": "Astigmatisme total : (-1.75)180°, l'astigmatisme cornéen : (-3.50)180°, Calculez l'astigmatisme interne, sachant que l'astigmatisme est régulier :",
+        "Choices": {
+          "A": "(-1.75)180°",
+          "B": "(-1.75)90°",
+          "C": "(-4.75)180°",
+          "D": "(-4.75)90°"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 88,
+        "Annexes": "",
+        "Question": "Astigmatisme total : (-1.50)180°, l'astigmatisme cornéen : (-1.50)180°. Calculez l'astigmatisme interne, sachant que l'astigmatisme est régulier :",
+        "Choices": {
+          "A": "(-1.50)90°",
+          "B": "(-1.50)180°",
+          "C": "0",
+          "D": "ce n'est pas possible de le calculer"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 89,
+        "Annexes": "",
+        "Question": "Une excentricité cornéenne de 0.15 est considérée comme :",
+        "Choices": {
+          "A": "faible",
+          "B": "forte",
+          "C": "standard"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 90,
+        "Annexes": "",
+        "Question": "Une excentricité cornéenne de 0.90 caractérise un profil :",
+        "Choices": {
+          "A": "lent",
+          "B": "standard",
+          "C": "rapide"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 91,
+        "Annexes": "",
+        "Question": "Qui est l'intrus ?",
+        "Choices": {
+          "A": "Cornea 550 Essilor",
+          "B": "Picolo",
+          "C": "TMS4-N",
+          "D": "Zeiss SL 800"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 92,
+        "Annexes": "",
+        "Question": "La périmétrie est un test qui permet de connaitre :",
+        "Choices": {
+          "A": "l'acuité visuelle",
+          "B": "la pression intra-oculaire",
+          "C": "le champ visuel",
+          "D": "la profondeur de la chambre antérieure"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 93,
+        "Annexes": "Annexe A",
+        "Question": "Précisez la puissance, l'axe et la nature de l'ASTco. central ?",
+        "Choices": {
+          "A": "pas d'astigmatisme cornéen",
+          "B": "(-0.75)0°, astigmatisme direct",
+          "C": "(-3.50)6°, astigmatisme direct",
+          "D": "(-1.76)0°, astigmatisme direct"
+        },
+        "Answer": "C"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 2,
-      "Question": "Les paupières assurent:",
-      "Choices": {
-        "A": "la protection des yeux",
-        "B": "la protection de la rétine contre l'éblouissement",
-        "C": "l'humidification de la cornée",
-        "D": "tout est juste"
+      {
+        "Id": 94,
+        "Annexes": "Annexe A",
+        "Question": "Précisez la puissance, l'axe et la nature de l'AST interne ?",
+        "Choices": {
+          "A": "pas possible de faire l'estimation",
+          "B": "(-0.75)90°, astigmatisme inverse",
+          "C": "(-3.50)96°, astigmatisme inverse",
+          "D": "(-1.76)90°, astigmatisme inverse"
+        },
+        "Answer": "C"
       },
-      "Answer": "D"
-    },
-    {
-      "Id": 3,
-      "Question": "Le muscle assurant principalement la fermeture des paupières est",
-      "Choices": {
-        "A": "le releveur de la paupière supérieure",
-        "B": "le muscle de Müller",
-        "C": "le muscle frontal",
-        "D": "le muscle orbiculaire"
+      {
+        "Id": 95,
+        "Annexes": "Annexe A",
+        "Question": "De combien est l'excentricité cornéen ?",
+        "Choices": {
+          "A": "+0.98",
+          "B": "+0.90",
+          "C": "+1.06",
+          "D": "+0.70"
+        },
+        "Answer": "A"
       },
-      "Answer": "D"
-    },
-    {
-      "Id": 4,
-      "Question": "Quelles modifications anatomiques apparaissent avec le temps?",
-      "Choices": {
-        "A": "perte du tonus palpébral",
-        "B": "diminution de l'élasticité de la peau palpébrale",
-        "C": "diminution des graisses orbitaires",
-        "D": "a + b",
-        "E": "a + c",
-        "F": "a + b + c"
+      {
+        "Id": 96,
+        "Annexes": "Annexe A",
+        "Question": "L'excentricité est-elle dans la norme ?",
+        "Choices": {
+          "A": "oui",
+          "B": "non"
+        },
+        "Answer": "B"
       },
-      "Answer": "D"
-    },
-    {
-      "Id": 5,
-      "Question": "Lors de tout clignement, la norme est une rotation du globe oculaire de 10 à 15°:",
-      "Choices": {
-        "A": "vers le haut",
-        "B": "vers le bas",
-        "C": "vers la gauche du sujet",
-        "D": "vers la droite du sujet"
+      {
+        "Id": 97,
+        "Annexes": "Annexe A",
+        "Question": "A quoi cette kératométrie peut-elle vous faire penser ?",
+        "Choices": {
+          "A": "une cornée normale",
+          "B": "un kératocône",
+          "C": "une chirurgie post-myopique",
+          "D": "un warepage"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 98,
+        "Annexes": "Annexe B",
+        "Question": "Précisez la puissance, l'axe et la nature de l'ASTco. central ?",
+        "Choices": {
+          "A": "(-0.50)0°, astigmatisme direct",
+          "B": "(-1.00)0°, astigmatisme direct",
+          "C": "(-1.00)135°, astigmatisme oblique",
+          "D": "(-0.50)135°, astigmatisme oblique"
+        },
+        "Answer": "C"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 6,
-      "Question": "La longueur axiale normale d'un oeil adulte emmétrope est de:",
-      "Choices": {
-        "A": "20 mm",
-        "B": "24 mm",
-        "C": "26 mm",
-        "D": "28 mm"
+      {
+        "Id": 99,
+        "Annexes": "Annexe B",
+        "Question": "Précisez la puissance, l'axe et la nature de l'AST interne ?",
+        "Choices": {
+          "A": "pas possible de faire l'estimation de tête",
+          "B": "(-1.00)135°, astigmatisme inverse",
+          "C": "(-0.50)135°, astigmatisme inverse",
+          "D": "(-1.50)0°, astigmatisme inverse"
+        },
+        "Answer": "A"
       },
-      "Answer": "B"
-    },
-    {
-      "Id": 7,
-      "Question": "La partie postérieure du bord libre contient:",
-      "Choices": {
-        "A": "les orifices des glandes de Meibomius",
-        "B": "les orifices des glandes de Zeiss",
-        "C": "les orifices des glandes de Moll",
-        "D": "les cils",
-        "E": "a + d"
+      {
+        "Id": 100,
+        "Annexes": "Annexe B",
+        "Question": "De combien est l'excentricité cornéen ?",
+        "Choices": {
+          "A": "-0.87",
+          "B": "-0.90",
+          "C": "-0.85",
+          "D": "-1.00"
+        },
+        "Answer": "A"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 8,
-      "Question": "Les glandes de Meibomius assurent:",
-      "Choices": {
-        "A": "la sécrétion aqueuse du film lacrymal",
-        "B": "la sécrétion de l'humeur aqueuse",
-        "C": "la sécrétion mucinique du film lacrymal",
-        "D": "la sécrétion lipidique du film lacrymal"
+      {
+        "Id": 101,
+        "Annexes": "Annexe B",
+        "Question": "L'excentricité est-elle dans la norme ?",
+        "Choices": {
+          "A": "oui",
+          "B": "non"
+        },
+        "Answer": "B"
       },
-      "Answer": "D"
-    },
-    {
-      "Id": 9,
-      "Question": "Le tarse de la paupière supérieure comprend plus de glandes de Meibomius que le tarse de la paupière inférieure:",
-      "Choices": {
-        "A": "vrai",
-        "B": "faux"
+      {
+        "Id": 102,
+        "Annexes": "Annexe B",
+        "Question": "A quoi cette kératométrie peut-elle vous faire penser ?",
+        "Choices": {
+          "A": "une cornée normale",
+          "B": "un kératocône",
+          "C": "une chirurgie post-myopique",
+          "D": "un warepage"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 103,
+        "Annexes": "",
+        "Question": "« Tous les rayons sont considérés comme ayant leurs centres sur l'axe de révolution de l'œil (axe passant par le centre cornéen) » C'est la définition ____",
+        "Choices": {
+          "A": "d'une carte sagittale en topographie",
+          "B": "d'une carte tangentielle en topographie",
+          "C": "cette technique est plus précise que l'autre carte",
+          "D": "A + C"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 104,
+        "Annexes": "",
+        "Question": "Sur une échelle absolue en topographie, vous observez un « sablier » rouge et vertical, l'astigmatisme est régulier, vous vous retrouvez face à :",
+        "Choices": {
+          "A": "un astigmatisme direct",
+          "B": "un astigmatisme inverse",
+          "C": "un kératocône",
+          "D": "une DMP"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 105,
+        "Annexes": "",
+        "Question": "Sur une échelle absolue en topographie, vous observez un « sablier » rouge et horizontal, l'astigmatisme est régulier, vous vous retrouvez face à :",
+        "Choices": {
+          "A": "un astigmatisme direct",
+          "B": "un astigmatisme inverse",
+          "C": "un kératocône",
+          "D": "tout est faux"
+        },
+        "Answer": "B"
+      }
+    ]
+  ],
+  "Biomicroscopie en contactologie": [
+    [
+      {
+        "Id": 106,
+        "Annexes": "",
+        "Question": "La biomicroscopie est un test obligatoire pour tous types d'adaptation en lentille de contact.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 107,
+        "Annexes": "",
+        "Question": "Quelle est la première chose à faire avant de commencer sa biomicroscopie ?",
+        "Choices": {
+          "A": "installer son patient",
+          "B": "se laver les mains et désinfecter son matériel",
+          "C": "régler ses oculaires",
+          "D": "régler la hauteur de la table"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 108,
+        "Annexes": "",
+        "Question": "De quoi n'est pas composé le biomicroscope ?",
+        "Choices": {
+          "A": "d'un système d'observation",
+          "B": "d'un système d'éclairage",
+          "C": "d'un système de support et positionnement du sujet",
+          "D": "il est composé de ces trois éléments"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 109,
+        "Annexes": "",
+        "Question": "Quel filtre n'est généralement pas présent sur une lampe à fente ?",
+        "Choices": {
+          "A": "filtre jaune",
+          "B": "filtre anti-calorifique",
+          "C": "le filtre anérythre",
+          "D": "les trois propositions sont présentes"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 110,
+        "Annexes": "",
+        "Question": "Quel est l'autre nom donné au filtre bleu ?",
+        "Choices": {
+          "A": "filtre cobalt",
+          "B": "filtre wratten 12",
+          "C": "filtre wratten 13",
+          "D": "filtre anérythre"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 111,
+        "Annexes": "",
+        "Question": "Quand le grossissement du système d'observation de la lampe à fente augmente, la profondeur de champ :",
+        "Choices": {
+          "A": "augmente",
+          "B": "diminue",
+          "C": "stagne"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 112,
+        "Annexes": "",
+        "Question": "Vous réalisez la méthode du carré pour connaitre la hauteur du prisme lacrymal. La norme théorique doit être de :",
+        "Choices": {
+          "A": "0.1 mm",
+          "B": "0.2 à 0.4 mm",
+          "C": "0.4 à 0.7 mm",
+          "D": "> 2 mm"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 113,
+        "Annexes": "",
+        "Question": "Vous effectuez votre méthode du carré et vous obtenez une mesure dans la norme, cela veut dire que :",
+        "Choices": {
+          "A": "le sujet a obligatoirement une bonne qualité lacrymale",
+          "B": "le sujet a un bon clignement",
+          "C": "le sujet n'a pas beaucoup de dépôts",
+          "D": "les trois propositions sont fausses"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 114,
+        "Annexes": "",
+        "Question": "L'éclairage diffus n'est pas conseillé pour :",
+        "Choices": {
+          "A": "l'observation de l'oeil fermé",
+          "B": "l'observation du spéculaire sur les larmes",
+          "C": "l'observation des conjonctives bulbaires",
+          "D": "l'observation du centrage d'une lentille souple"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 115,
+        "Annexes": "",
+        "Question": "Un éclairage est direct quand :",
+        "Choices": {
+          "A": "la zone éclairée ne correspond pas à la zone observée",
+          "B": "la zone éclairée correspond à la zone observée",
+          "C": "le système d'éclairage et d'observation ne sont pas en coïncidence au niveau de la structure à observer",
+          "D": "A + C"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 116,
+        "Annexes": "",
+        "Question": "Quelle coupe n'est pas possible en éclairage direct ?",
+        "Choices": {
+          "A": "la coupe parallélépipédique",
+          "B": "la coupe optique",
+          "C": "la coupe en rétro-illumination direct",
+          "D": "A + C"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 117,
+        "Annexes": "",
+        "Question": "Quelle proposition est fausse lorsqu'on souhaite regarder le film lacrymal à la biomicroscopie ?",
+        "Choices": {
+          "A": "on utilise la réflexion spéculaire du 1er reflet de Purkinje",
+          "B": "on utilise une fente parallélépipédique",
+          "C": "on peut utiliser un grossissement très fort (x40)",
+          "D": "on utilise une intensité très faible pour ne pas éblouir le sujet"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 118,
+        "Annexes": "",
+        "Question": "Pour vérifier la profondeur d'une atteinte, il est intéressant de :",
+        "Choices": {
+          "A": "passer en diffus",
+          "B": "passer en coupe optique",
+          "C": "passer en rétro-illumination",
+          "D": "passer en spéculaire"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 119,
+        "Annexes": "",
+        "Question": "Pour observer les structures après instillation de fluorescéine, on utilise :",
+        "Choices": {
+          "A": "un filtre jaune + filtre vert",
+          "B": "un filtre jaune + filtre bleu",
+          "C": "un filtre vert + filtre bleu",
+          "D": "A + C"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 120,
+        "Annexes": "",
+        "Question": "On observe la fluorescéine sur un sujet après la pose d'une lentille rigide, le diffus doit être enlevé pour avoir une meilleure observation.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 121,
+        "Annexes": "",
+        "Question": "Quelle échelle de gradation en contactologie n'existe pas ?",
+        "Choices": {
+          "A": "EFRON",
+          "B": "BHVI",
+          "C": "l'échelle de gradation de Snellen",
+          "D": "AllCL",
+          "E": "C + D"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 122,
+        "Annexes": "",
+        "Question": "La gradation de la conjonctive palpébrale supérieure se fait en :",
+        "Choices": {
+          "A": "3 zones distinctes",
+          "B": "4 zones distinctes",
+          "C": "5 zones distinctes",
+          "D": "6 zones distinctes"
+        },
+        "Answer": "C"
+      }
+    ]
+  ],
+  "Colorants et tests lacrymaux": [
+    [
+      {
+        "Id": 123,
+        "Annexes": "",
+        "Question": "Qu'est-ce qui ne provoque pas la coloration des lentilles souples ?",
+        "Choices": {
+          "A": "rifamicine",
+          "B": "tetracycline",
+          "C": "fluorescéine macromoléculaire",
+          "D": "fluorescéine micromoléculaire"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 124,
+        "Annexes": "",
+        "Question": "Le premier avantage de la fluorescéine est qu'il ne peut pas provoquer de réaction allergique.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 125,
+        "Annexes": "",
+        "Question": "Contrairement à la fluorescéine, le vert de lissamine est une solution de coloration vitale.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 126,
+        "Annexes": "",
+        "Question": "Quelle proposition est fausse ?",
+        "Choices": {
+          "A": "le vert de lissamine possède les mêmes propriétés colorantes que le Rose Bengale",
+          "B": "le vert de lissamine est indolore à la pose",
+          "C": "le vert de lissamine peut se coupler à la fluorescéine",
+          "D": "la fluorescéine colore les mucus et les cellules"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 127,
+        "Annexes": "",
+        "Question": "Le Rose Bengal est intrinsèquement toxique et douloureux à la pose.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 128,
+        "Annexes": "",
+        "Question": "Quel test est invasif ?",
+        "Choices": {
+          "A": "BUT",
+          "B": "FBUT",
+          "C": "Tearscope",
+          "D": "les trois ne le sont pas"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 129,
+        "Annexes": "",
+        "Question": "Quel test est un test qualitatif ?",
+        "Choices": {
+          "A": "Schirmer I",
+          "B": "le fil rouge phénol",
+          "C": "BUT",
+          "D": "le SMTube"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 130,
+        "Annexes": "",
+        "Question": "Vous utilisez votre tearscope et vous observez des formes avec des couleurs d'interférences, vous êtes face à :",
+        "Choices": {
+          "A": "une couche lipidique très faible",
+          "B": "une couche lipidique tout à fait normale",
+          "C": "une couche lipidique épaisse",
+          "D": "tout est faux"
+        },
+        "Answer": "C"
+      }
+    ]
+  ],
+  "Introduction aux lentilles de contact": [
+    [
+      {
+        "Id": 131,
+        "Annexes": "",
+        "Question": "Quand est arrivée la première LRPG sur le marché ?",
+        "Choices": {
+          "A": "1960",
+          "B": "1970",
+          "C": "1980",
+          "D": "1990"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 132,
+        "Annexes": "",
+        "Question": "Quand est arrivée la première LSSIH sur le marché ?",
+        "Choices": {
+          "A": "1988",
+          "B": "1998",
+          "C": "2002",
+          "D": "2007"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 133,
+        "Annexes": "",
+        "Question": "Que signifie PMMA ?",
+        "Choices": {
+          "A": "polyméthacrinate de méthyle acrylique",
+          "B": "polyméthacrybate de méthyle acrylique",
+          "C": "polyméthacrylate de méthyle acrylique",
+          "D": "polycratère de méthyle acrylique"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 134,
+        "Annexes": "",
+        "Question": "De combien est le Dk d'une lentille en PMMA ?",
+        "Choices": {
+          "A": "0",
+          "B": "25",
+          "C": "50",
+          "D": "75"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 135,
+        "Annexes": "",
+        "Question": "Que signifie HEMA ?",
+        "Choices": {
+          "A": "métacrylate d'hydroxyethyle",
+          "B": "métacylate d'hydrogène",
+          "C": "métacrylate d'hydrophilie",
+          "D": "métacrylate d'hydrotinogénèse"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 136,
+        "Annexes": "",
+        "Question": "Quel matériau a été utilisé en premier en contactologie ?",
+        "Choices": {
+          "A": "HEMA",
+          "B": "PMMA",
+          "C": "PDMS",
+          "D": "FLUOR"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 137,
+        "Annexes": "",
+        "Question": "Le matériau d'une lentille de contact idéal devrait :",
+        "Choices": {
+          "A": "répondre aux besoins en oxygène de la cornée",
+          "B": "être physiologiquement inerte",
+          "C": "être durable dans le temps",
+          "D": "tout est juste"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 138,
+        "Annexes": "",
+        "Question": "D'après la classification internationale (ISO), le suffixe « filcon » est utilisé pour :",
+        "Choices": {
+          "A": "les matériaux hydratés (souples)",
+          "B": "les matériaux non hydratés (rigide)"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 139,
+        "Annexes": "",
+        "Question": "L'acide méthacrylique va permettre ?",
+        "Choices": {
+          "A": "d'augmenter l'hydratation de surface du matériau",
+          "B": "de baisser l'hydrophilie de surface du matériau",
+          "C": "de charger positivement le matériau",
+          "D": "tout est juste"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 140,
+        "Annexes": "",
+        "Question": "En général, un matériau est qualifié d'ionique si la proportion de molécules ionisées est supérieure à :",
+        "Choices": {
+          "A": "0,25% à pH7,2",
+          "B": "0,50% à pH7,2",
+          "C": "0,75% à pH7,2",
+          "D": "1% à pH7,2"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 141,
+        "Annexes": "",
+        "Question": "Selon la classification par la FDA, les lentilles ioniques sont :",
+        "Choices": {
+          "A": "compris dans le groupe I et II",
+          "B": "compris dans le groupe II et III",
+          "C": "compris dans le groupe III et IV",
+          "D": "compris dans le groupe I et IV"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 142,
+        "Annexes": "",
+        "Question": "Mon matériau a une teneur en eau > 50% et est ionique, théoriquement il fait partie du :",
+        "Choices": {
+          "A": "groupe I",
+          "B": "groupe II",
+          "C": "groupe III",
+          "D": "groupe IV"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 143,
+        "Annexes": "",
+        "Question": "Mon matériau a une teneur en eau < 50% mais est ionique, théoriquement il fait partie du :",
+        "Choices": {
+          "A": "groupe I",
+          "B": "groupe II",
+          "C": "groupe III",
+          "D": "groupe IV"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 144,
+        "Annexes": "",
+        "Question": "Quel est le groupe pour lequel les matériaux sont les plus sensibles aux dépôts de surface ?",
+        "Choices": {
+          "A": "groupe I",
+          "B": "groupe II",
+          "C": "groupe III",
+          "D": "groupe IV"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 145,
+        "Annexes": "",
+        "Question": "Plus un matériau est hydraté, est ionique les dépôts, et plus un matériau les dépôts de surface.",
+        "Choices": {
+          "A": "plus il va attirer / plus il va rejeter",
+          "B": "plus il va rejeter / plus il va attirer",
+          "C": "plus il va attirer / plus il va attirer",
+          "D": "plus il va rejeter / plus il va rejeter"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 146,
+        "Annexes": "",
+        "Question": "Le Chitern peut être utilisé pour :",
+        "Choices": {
+          "A": "mesurer le diamètre total de la LDC",
+          "B": "mesurer l'épaisseur au centre de la LDC",
+          "C": "mesurer le taux d'hydratation de la LDC",
+          "D": "avoir une première impression de la mouillabilité de la LDC",
+          "E": "a + b",
+          "F": "c + d"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 147,
+        "Annexes": "",
+        "Question": "Un radiuscope vous permettra de mesurer le rayon de la zone optique postérieure d'une LR.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 148,
+        "Annexes": "",
+        "Question": "Le choix des paramètres des lentilles souples sont bien plus nombreux que ceux des LRPG.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 149,
+        "Annexes": "",
+        "Question": "Quelle technique de fabrication répond le plus à une production de masse ?",
+        "Choices": {
+          "A": "le moulage",
+          "B": "le surfaçage",
+          "C": "le sub micron lathing",
+          "D": "tout est faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 150,
+        "Annexes": "",
+        "Question": "Quelle est la différence entre le « spin-casting » et le « cast-moulding » ?",
+        "Choices": {
+          "A": "le « spin casting » est une fabrication par surfaçage, contrairement au « cast-moulding »",
+          "B": "le « cast-moulding » nécessite deux moules, alors que le « spin-casting » un seul",
+          "C": "le « cast-moulding » est dédié à la fabrication des lentilles rigides, contrairement au « spin casting »",
+          "D": "le « spin casting » est dédié à la fabrication des lentilles rigides, contrairement au « cast-moulding »"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 151,
+        "Annexes": "",
+        "Question": "Le « spin casting » peut se réaliser à l'état sec et à l'état hydraté.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 152,
+        "Annexes": "",
+        "Question": "Durant le « spin-casting », la face arrière et la puissance seront définis par :",
+        "Choices": {
+          "A": "la force centrifuge",
+          "B": "le temps de polymérisation",
+          "C": "le volume de monomère injecté",
+          "D": "a+b+c",
+          "E": "a + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 153,
+        "Annexes": "",
+        "Question": "Avec l'aide des nouvelles tours numériques, le polissage est devenue une étape beaucoup plus importante.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 154,
+        "Annexes": "",
+        "Question": "Durant la fabrication de la lentille, la lentille passe par l'étape « autoclave ». Cette étape :",
+        "Choices": {
+          "A": "permet de teinter une lentille",
+          "B": "permet de rajouter un traitement plasma sur la lentille",
+          "C": "permet de garantir une stérilité de la lentille",
+          "D": "permet d'éviter le polissage de la lentille"
+        },
+        "Answer": "C"
+      }
+    ]
+  ],
+  "Les lentilles souples, toriques et multifocales": [
+    [
+      {
+        "Id": 155,
+        "Annexes": "",
+        "Question": "Réfraction lunettes: ODG +2.50 (+2.50) 180°. Estimez la réfraction en lentilles. (dvo = 13mm)",
+        "Choices": {
+          "A": "+5.25 (-2.75) 90°",
+          "B": "+4.75 (-2.25) 90°",
+          "C": "+5.25 (-2.25) 90°",
+          "D": "+4.75 (-2.75) 90°"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 156,
+        "Annexes": "",
+        "Question": "Réfraction lunettes: ODG -6.50 (+2.00)85°. Estimez la réfraction en lentilles. (dvo = 13mm)",
+        "Choices": {
+          "A": "-7.00 (-2.25)175°",
+          "B": "-7.00 (-1.75)175°",
+          "C": "-4.25 (-1.75)175°",
+          "D": "-4.25 (-2.25)175°"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 157,
+        "Annexes": "",
+        "Question": "Réfraction lunettes: OD -4.75D OG -8.00D. Estimez la réfraction en lentilles. (dvo = 13mm)",
+        "Choices": {
+          "A": "OD -4.50D/OG -7.25D",
+          "B": "OD -5.00D/OG -8.50D",
+          "C": "OD -4.50D/OG -8.50D",
+          "D": "OD -5.00D/OG -7.25D"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 158,
+        "Annexes": "",
+        "Question": "Réfraction lunettes: OD +5.75D OG +7.00D. Estimez la réfraction en lentilles. (dvo = 13mm)",
+        "Choices": {
+          "A": "OD +5.50D/OG +6.50D",
+          "B": "OD +6.00D/OG +7.50D",
+          "C": "OD +5.50D/OG +7.50D",
+          "D": "OD +6.00D/OG +6.50D"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 159,
+        "Annexes": "",
+        "Question": "La différence de puissance entre lunettes et lentilles est dû :",
+        "Choices": {
+          "A": "à la distance verre-oeil",
+          "B": "au changement de la kératométrie de l'oeil entre les deux équipements",
+          "C": "au fait que les lentilles sont moins épaisses qu'un verre",
+          "D": "tout est juste"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 160,
+        "Annexes": "",
+        "Question": "D'après le tableau de conversion, il y a une différence de correction entre lunettes et lentilles à partir de :",
+        "Choices": {
+          "A": "+/- 2.00D",
+          "B": "+/- 3.00D",
+          "C": "+/- 4.00D",
+          "D": "+/- 5.00D"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 161,
+        "Annexes": "",
+        "Question": "En vision de près en lentilles, un sujet myope devra accommoder qu'avec ses lunettes pour une distance donnée.",
+        "Choices": {
+          "A": "plus",
+          "B": "moins"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 162,
+        "Annexes": "",
+        "Question": "En vision de près en lentilles, un sujet hypermétrope devra accommoder qu'avec ses lunettes pour une distance donnée.",
+        "Choices": {
+          "A": "plus",
+          "B": "moins"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 163,
+        "Annexes": "",
+        "Question": "Une LSH de -7.00D entrainera:",
+        "Choices": {
+          "A": "une lentille plus épaisse en son centre",
+          "B": "une lentille plus épaisse en sa périphérie",
+          "C": "une diminution de la transmissibilité à l'02 au centre de la lentille",
+          "D": "une diminution de la transmissibilité à l'O2 en périphérie de la lentille",
+          "E": "a + c",
+          "F": "b + d"
+        },
+        "Answer": "F"
+      }
+    ],
+    [
+      {
+        "Id": 164,
+        "Annexes": "",
+        "Question": "Pour un sujet hypermétrope en vision de près, quel effet prismatique présent en lunettes n'est plus présent en lentilles ?",
+        "Choices": {
+          "A": "l'effet prismatique base externe, ce qui lui oblige à moins converger",
+          "B": "l'effet prismatique base externe, ce qui lui oblige à plus converger",
+          "C": "l'effet prismatique base interne, ce qui lui oblige à moins converger",
+          "D": "l'effet prismatique base interne, ce qui lui oblige à plus converger"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 165,
+        "Annexes": "",
+        "Question": "Pour un sujet myope en vision de près, quel effet prismatique présent en lunettes n'est plus présent en lentilles ?",
+        "Choices": {
+          "A": "l'effet prismatique base externe, ce qui lui oblige à moins converger",
+          "B": "l'effet prismatique base externe, ce qui lui oblige à plus converger",
+          "C": "l'effet prismatique base interne, ce qui lui oblige à moins converger",
+          "D": "l'effet prismatique base interne, ce qui lui oblige à plus converger"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 166,
+        "Annexes": "",
+        "Question": "Le passage d'équipement lunettes à lentilles va modifier le grossissement induit par l'équipement correcteur.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 167,
+        "Annexes": "",
+        "Question": "Dans le cas où la lentille souple épouse totalement la forme de la cornée.",
+        "Choices": {
+          "A": "son ménisque de larmes peut être considéré comme négligeable",
+          "B": "son ménisque de larmes n'est pas négligeable, puissance réfractive = puissance lentille + puissance larme"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 168,
+        "Annexes": "",
+        "Question": "Une adaptation en lentille de contact doit pouvoir garantir :",
+        "Choices": {
+          "A": "un confort objectif uniquement",
+          "B": "une vision optimale",
+          "C": "une sécurité pour le porteur",
+          "D": "un prix de vente moindre pour le sujet",
+          "E": "a+b+c+d",
+          "F": "b + c"
+        },
+        "Answer": "F"
+      }
+    ],
+    [
+      {
+        "Id": 169,
+        "Annexes": "",
+        "Question": "Selon Holden et Mertz, de combien doit être au minimum le Dk/t d'une lentille souple en port journalier, pour éviter la majorité des complications associées au manque d'oxygène.",
+        "Choices": {
+          "A": "16",
+          "B": "24",
+          "C": "44",
+          "D": "87"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 170,
+        "Annexes": "",
+        "Question": "Selon Holden et Mertz, de combien doit être au minimum le Dk/t d'une lentille souple en port étendu, pour éviter la majorité des complications associées au manque d'oxygène.",
+        "Choices": {
+          "A": "16",
+          "B": "24",
+          "C": "44",
+          "D": "87"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 171,
+        "Annexes": "",
+        "Question": "Quelle proposition est fausse ?",
+        "Choices": {
+          "A": "les LS sont contre-indiquées pour les pathologies de surface oculaires",
+          "B": "les LRPG procurent une meilleure qualité de vision que les LS",
+          "C": "les LS ont un Module de Young très fort",
+          "D": "les LS ont un module d'élasticité faible et un module de flexibilité fort"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 172,
+        "Annexes": "",
+        "Question": "Quelle proposition aura tendance à se déchirer plus facilement ?",
+        "Choices": {
+          "A": "une lentille avec un module d'élasticité élevé et un module de flexibilité faible",
+          "B": "une lentille avec un module d'élasticité faible et un module de flexibilité fort",
+          "C": "une lentille avec un fort Module de Young",
+          "D": "tout est faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 173,
+        "Annexes": "",
+        "Question": "Une lentille avec une teneur en eau > à 50% aura tendance à :",
+        "Choices": {
+          "A": "être moins fragile",
+          "B": "avoir une meilleure résistance aux dépôts",
+          "C": "tout est faux",
+          "D": "tout est juste"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 174,
+        "Annexes": "",
+        "Question": "La déshydratation d'une LSH à sa surface va avoir une conséquence sur sa teneur en eau.",
+        "Choices": {
+          "A": "vrai, sa teneur en eau va diminuer",
+          "B": "vrai, sa teneur en eau va augmenter",
+          "C": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 175,
+        "Annexes": "",
+        "Question": "En théorie, plus la LDC est flexible, et plus :",
+        "Choices": {
+          "A": "elle augmente les forces de frictions antérieures",
+          "B": "elle augmente les forces de frictions postérieures",
+          "C": "elle diminue les forces de frictions antérieures",
+          "D": "elle diminue les forces de frictions postérieures",
+          "E": "a + d",
+          "F": "b + c"
+        },
+        "Answer": "F"
+      }
+    ],
+    [
+      {
+        "Id": 176,
+        "Annexes": "",
+        "Question": "Quelle proposition est fausse ?",
+        "Choices": {
+          "A": "plus une LDC est fine, et plus elle est flexible",
+          "B": "plus une LDC est hydrophile, et plus elle est flexible",
+          "C": "les LS Hydrogel sont moins flexibles que les LSSIH",
+          "D": "la flexibilité est la capacité de la lentille à se déformer"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 177,
+        "Annexes": "",
+        "Question": "En théorie en LSH, quel élément va être le plus pertinent pour vous permettre de choisir votre Ro ?",
+        "Choices": {
+          "A": "le diamètre cornéen",
+          "B": "le diamètre pupillaire",
+          "C": "le profil cornéo-scléral",
+          "D": "la qualité du film lacrymal"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 178,
+        "Annexes": "",
+        "Question": "En LSH, la mesure du diamètre cornéen va permettre de choisir :",
+        "Choices": {
+          "A": "le diamètre total de la lentille",
+          "B": "le diamètre de la zone optique",
+          "C": "le Ro de la lentille",
+          "D": "le module de Young de la lentille"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 179,
+        "Annexes": "",
+        "Question": "Vous avez le choix entre une LSH (8,8/14) et une LSH (8,4/14) avec des géométries différentes. Laquelle des deux lentilles va être la plus plate sur le sujet ?",
+        "Choices": {
+          "A": "8,8/14",
+          "B": "8,4/14",
+          "C": "impossible de prévoir"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 180,
+        "Annexes": "",
+        "Question": "La notion de flèche est utilisée :",
+        "Choices": {
+          "A": "pour reconnaitre l'orientation d'une LST",
+          "B": "pour le diamètre total de la lentille",
+          "C": "pour la hauteur sagittale de la lentille",
+          "D": "pour définir la zone optique de la lentille"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 181,
+        "Annexes": "",
+        "Question": "Il est possible de modifier la flèche en faisant varier :",
+        "Choices": {
+          "A": "le Ro de la lentille",
+          "B": "le diamètre total de la lentille",
+          "C": "le diamètre de la Zo de la lentille",
+          "D": "a + b",
+          "E": "a+b+c"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 182,
+        "Annexes": "",
+        "Question": "Sur une LSH, en réduisant le Ro, on :",
+        "Choices": {
+          "A": "réduit la flèche",
+          "B": "augmente la flèche",
+          "C": "pas d'effet sur la flèche"
+        },
+        "Answer": "B"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 10,
-      "Question": "La sécrétion séreuse du film lacrymal est assurée par:",
-      "Choices": {
-        "A": "la glande lacrymale principale",
-        "B": "les glandes de Meibomius",
-        "C": "les glandes de Krause et Wolfring",
-        "D": "les glandes de Henle et les cellules à gobelets",
-        "E": "a + c",
-        "F": "a + b + c"
+      {
+        "Id": 183,
+        "Annexes": "",
+        "Question": "Cela a comme effet :",
+        "Choices": {
+          "A": "d'augmenter l'effet de serrage de la lentille",
+          "B": "d'augmenter l'effet d'aplatissement de la lentille",
+          "C": "de ne rien changer à la flèche de la lentille"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 184,
+        "Annexes": "",
+        "Question": "Sur une LSH, en réduisant le diamètre total de la lentille, on :",
+        "Choices": {
+          "A": "réduit la flèche",
+          "B": "augmente la flèche",
+          "C": "pas d'effet sur la flèche"
+        },
+        "Answer": "A"
       },
-      "Answer": "E"
-    },
-    {
-      "Id": 11,
-      "Question": "La glande lacrymale principale se situe sous le rebord:",
-      "Choices": {
-        "A": "supéro-externe",
-        "B": "supéro-interne",
-        "C": "inféro-externe",
-        "D": "inféro-interne"
+      {
+        "Id": 185,
+        "Annexes": "",
+        "Question": "Cela a comme effet :",
+        "Choices": {
+          "A": "d'augmenter l'effet de serrage de la lentille",
+          "B": "d'augmenter l'effet d'aplatissement de la lentille",
+          "C": "de ne rien changer à la flèche de la lentille"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 186,
+        "Annexes": "",
+        "Question": "En augmentant les rayons des dégagements, on :",
+        "Choices": {
+          "A": "réduit la flèche",
+          "B": "augmente la flèche",
+          "C": "pas d'effet sur la flèche"
+        },
+        "Answer": "A"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 12,
-      "Question": "La sécrétion mucinique du film lacrymal est assurée par:",
-      "Choices": {
-        "A": "la glande lacrymale principale",
-        "B": "les glandes de Meibomius",
-        "C": "les glandes de Krause et Wolfring",
-        "D": "les glandes de Henle et les cellules à gobelets",
-        "E": "a + c",
-        "F": "a + c + d"
+      {
+        "Id": 187,
+        "Annexes": "",
+        "Question": "Cela a comme effet :",
+        "Choices": {
+          "A": "d'augmenter l'effet de serrage de la lentille",
+          "B": "d'augmenter l'effet d'aplatissement de la lentille",
+          "C": "de ne rien changer à la flèche de la lentille"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 188,
+        "Annexes": "",
+        "Question": "Généralement, sauf indication contraire : le diamètre de la lentille souple =",
+        "Choices": {
+          "A": "diamètre cornéen + 2mm",
+          "B": "diamètre cornéen - 2mm",
+          "C": "diamètre cornéen + 4mm",
+          "D": "diamètre cornéen - 4mm"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 189,
+        "Annexes": "",
+        "Question": "Pour les lentilles sans règles d'adaptations, il faudra suivre la règle du fournisseur pour la lentille de première intention.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 190,
+        "Annexes": "",
+        "Question": "Sur une cornée régulière, votre règle d'adaptation vous préconise Ro= Km +0.3. Que signifie Km ?",
+        "Choices": {
+          "A": "la kératométrie moyenne entre les deux méridiens principaux",
+          "B": "la moyenne des excentricités cornéennes des deux méridiens principaux",
+          "C": "la différence de courbures cornéennes entre les deux méridiens principaux",
+          "D": "la moyenne des deux méridiens principaux en puissance dioptrique"
+        },
+        "Answer": "A"
       },
-      "Answer": "D"
-    },
-    {
-      "Id": 13,
-      "Question": "Les glandes séreuses et sébacées des paupières sont des glandes:",
-      "Choices": {
-        "A": "endocrines",
-        "B": "exocrines",
-        "C": "a + b",
-        "D": "tout est faux"
+      {
+        "Id": 191,
+        "Annexes": "",
+        "Question": "Vous imprimez votre ticket d'autore et vous obtenez les résultats : <R> R1:8.18 (41.25D) 177° R2: 8.03 (42.05D) 87°. Calculez Km :",
+        "Choices": {
+          "A": "41,25D",
+          "B": "8.10 mm",
+          "C": "0.15 mm",
+          "D": "tout est faux"
+        },
+        "Answer": "B"
       },
-      "Answer": "B"
-    },
-    {
-      "Id": 14,
-      "Question": "Le film lacrymal est composé de:",
-      "Choices": {
-        "A": "immunoglobulines",
-        "B": "vitamines",
-        "C": "protéines",
-        "D": "bicarbonates et carbonates",
-        "E": "tout sauf la d",
-        "F": "a + b + c + d"
+      {
+        "Id": 192,
+        "Annexes": "",
+        "Question": "Adaptez la règle d'adaptation ci-dessus.",
+        "Choices": {
+          "A": "Km = 41,55D",
+          "B": "Km = 8.4 mm",
+          "C": "Km = 3.15 mm",
+          "D": "tout est faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 193,
+        "Annexes": "",
+        "Question": "En se basant uniquement sur l'ouverture palpébrale, si l'ouverture palpébrale est petite, le recouvrement est grand, les paupières vont :",
+        "Choices": {
+          "A": "avoir plus d'incidence sur la rotation de la lentille",
+          "B": "avoir moins d'incidence sur la rotation de la lentille",
+          "C": "avoir la même incidence que si l'ouverture palpébrale était grande"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 194,
+        "Annexes": "",
+        "Question": "L'astigmatisme interne n'a pas d'intérêt dans le choix d'une LST.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 195,
+        "Annexes": "",
+        "Question": "Lequel n'est pas un système de stabilisation pour une LST ?",
+        "Choices": {
+          "A": "troncature",
+          "B": "prisme ballast",
+          "C": "prisme péri-ballast",
+          "D": "dynamique par affinement",
+          "E": "ils le sont tous"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 196,
+        "Annexes": "",
+        "Question": "Je suis un système de stabilisation, avec un centre de gravité de la lentille décalé vers le bas, je suis plus épais en inférieur et je ne nécessite pas forcément d'association. Je suis :",
+        "Choices": {
+          "A": "un système en troncature",
+          "B": "un système par double affinement",
+          "C": "un système prisme ballast",
+          "D": "tout est juste"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 197,
+        "Annexes": "",
+        "Question": "Quand on dit d'une LST qu'elle a un tore externe, on parle du tore de sa face :",
+        "Choices": {
+          "A": "antérieure",
+          "B": "postérieure",
+          "C": "les deux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 198,
+        "Annexes": "",
+        "Question": "Quand on dit d'une LST qu'elle a un tore interne, on parle du tore de sa face :",
+        "Choices": {
+          "A": "antérieure",
+          "B": "postérieure",
+          "C": "les deux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 199,
+        "Annexes": "",
+        "Question": "Quel procédé de stabilisation n'existe pas ?",
+        "Choices": {
+          "A": "mono procédé de stabilisation",
+          "B": "double procédé de stabilisation",
+          "C": "triple procédé de stabilisation",
+          "D": "ils existent tous"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 200,
+        "Annexes": "",
+        "Question": "En stabilisation par prisme ballast, la lentille possède un prisme de l'ordre de :",
+        "Choices": {
+          "A": "1A",
+          "B": "2.5A",
+          "C": "3.5A",
+          "D": "4.5A"
+        },
+        "Answer": "A"
       },
-      "Answer": "F"
-    },
-    {
-      "Id": 15,
-      "Question": "Les méats lacrymaux sont situés:",
-      "Choices": {
-        "A": "sur le bord libre supérieur et inférieur, à l'angle interne",
-        "B": "sur le bord libre supérieur et inférieur, à l'angle externe",
-        "C": "uniquement sur le bord libre inférieur, à l'angle interne",
-        "D": "uniquement sur le bord libre supérieur, à l'angle externe"
+      {
+        "Id": 201,
+        "Annexes": "",
+        "Question": "Base :",
+        "Choices": {
+          "A": "90°",
+          "B": "180°",
+          "C": "270°",
+          "D": "0°"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 202,
+        "Annexes": "",
+        "Question": "Trouvez la fausse proposition.",
+        "Choices": {
+          "A": "un système par doubles affinements verticaux entraine moins de risque d'hypoxie qu'un système ballast en partie inf.",
+          "B": "un système par doubles affinements verticaux nécessite une petite ouverture palpébrale",
+          "C": "un système par doubles affinements verticaux n'inclut pas de prisme dans la zone optique",
+          "D": "« double affinement verticaux » signifie que la lentille est amincie en sup et en inf"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 203,
+        "Annexes": "",
+        "Question": "Peut-on associer une lentille à tore interne avec un système de stabilisation péri-ballast ?",
+        "Choices": {
+          "A": "oui",
+          "B": "non"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 204,
+        "Annexes": "",
+        "Question": "Dans quel cas le système péri-ballast va-t-il être le plus performant ?",
+        "Choices": {
+          "A": "petite ouverture palpébrale avec un recouvrement sup. faible",
+          "B": "petite ouverture palpébrale avec un recouvrement sup. important",
+          "C": "grande ouverture palpébrale avec un recouvrement sup. important"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 205,
+        "Annexes": "",
+        "Question": "Votre sujet a un PCS lent, la LST la plus mobile sera :",
+        "Choices": {
+          "A": "celle avec un fort module de Young",
+          "B": "celle avec un faible module de Young"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 206,
+        "Annexes": "",
+        "Question": "Quel type de gravure n'existe pas en LST ?",
+        "Choices": {
+          "A": "1 trait vertical à 270°",
+          "B": "3 traits séparés de 15° en inf",
+          "C": "2 traits en horizontal à 0 et 180°",
+          "D": "ils existent tous"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 207,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants : 8.00 à 180° / 7.70 à 90°. Prescription=-2.00 (+2.00)90°. Vers quelle géométrie vous orientez-vous ? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 208,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants : 7.85 à 180° / 7.50 à 90°. Prescription = -1.75 (+2.25)90°. Vers quelle géométrie vous orientez-vous ? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 209,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants : 7.85 à 165° / 7.85 à 75°. Prescription=-1.00 (+1.75)75°. Vers quelle géométrie vous orientez-vous ? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 210,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants : 7.85 à 165° / 7.80 à 75°. Prescription = -2.75 (+1.75)75°. Vers quelle géométrie vous orientez-vous? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 211,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants : 7.90 à 180° / 7.60 à 90°. Prescription = -3.50 (+2.00)90°. Vers quelle géométrie vous orientez-vous ? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 212,
+        "Annexes": "",
+        "Question": "Après avoir effectué votre kératométrie, vous avez les résultats suivants: 7.90 à 180° / 7.80 à 90°. Prescription = -3.50 (+0.50)90°. Vers quelle géométrie vous orientez-vous ? (Index: 1,3375)",
+        "Choices": {
+          "A": "lentille souple sphérique",
+          "B": "lentille souple torique externe",
+          "C": "lentille souple torique interne",
+          "D": "lentille souple bitorique"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 213,
+        "Annexes": "",
+        "Question": "Quelles peuvent être les signes d'une LST qui a tournée ?",
+        "Choices": {
+          "A": "une baisse d'AV",
+          "B": "une fluctuation de l'AV",
+          "C": "inconfort physique en lentille",
+          "D": "une hyperhémie",
+          "E": "a + b"
+        },
+        "Answer": "E"
+      }
+    ],
+    [
+      {
+        "Id": 214,
+        "Annexes": "",
+        "Question": "Si la lentille tourne de la gauche vers la droite, on appellera ça une rotation:",
+        "Choices": {
+          "A": "SAM",
+          "B": "SIAM"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 215,
+        "Annexes": "",
+        "Question": "Vous voyez une lentille intitulée : « Comfilcon A Multifocal D. » Le « D» signifie :",
+        "Choices": {
+          "A": "que c'est une lentille à VL centrale",
+          "B": "que c'est une lentille à VP centrale",
+          "C": "que c'est une lentille avec un traitement de surface sur le matériau",
+          "D": "que c'est une lentille d'essai"
+        },
+        "Answer": "A"
       },
-      "Answer": "A"
-    },
-    {
-      "Id": 16,
-      "Question": "Je suis un canal osseux avec une longueur de 12 à 15mm, je suis:",
-      "Choices": {
-        "A": "le sac lacrymal",
-        "B": "les canalicules lacrymaux",
-        "C": "le canal lacrymo-nasal",
-        "D": "tout est faux"
+      {
+        "Id": 216,
+        "Annexes": "",
+        "Question": "Sur ce même type de lentille, la VP et la VL sont à vision ___ et la VI à vision ___.",
+        "Choices": {
+          "A": "asphérique / sphérique",
+          "B": "asphérique / asphérique",
+          "C": "sphérique / asphérique",
+          "D": "sphérique / sphérique"
+        },
+        "Answer": "C"
       },
-      "Answer": "C"
-    },
-    {
-      "Id": 17,
-      "Question": "Remettez les éléments dans le bon ordre d'écoulement:",
-      "Choices": {
-        "A": "glande lacrymale / méats lacrymaux / sac lacrymal / canalicules lacrymaux / canal lacrymo-nasal",
-        "B": "glande lacrymale / méats lacrymaux / canal lacrymo-nasal / canalicules lacrymaux / sac lacrymal",
-        "C": "glande lacrymale / méats lacrymaux / canalicules lacrymaux / sac lacrymal / canal lacrymo-nasal",
-        "D": "glande lacrymale / méats lacrymaux / canalicules lacrymaux / canal lacrymo-nasal / sac lacrymal"
+      {
+        "Id": 217,
+        "Annexes": "",
+        "Question": "Comment appelle-t-on ce type de lentilles multifocales?",
+        "Choices": {
+          "A": "une lentille à vision simultanée",
+          "B": "une lentille à monovision",
+          "C": "une lentille à vision alternée"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 218,
+        "Annexes": "",
+        "Question": "Quel test peut vous permettre de définir l'oeil préférentiel en VL pour une adaptation en lentilles multifocales?",
+        "Choices": {
+          "A": "un PPC",
+          "B": "un masquage",
+          "C": "un test du brouillage avec une face de +0.75D en monoculaire, l'autre oeil fermé",
+          "D": "un test du brouillage avec une face de +0.75D en binoculaire, oeil par oeil",
+          "E": "b + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 219,
+        "Annexes": "",
+        "Question": "Quel test n'est pas indispensable pour effectuer votre examen d'adaptation pour presbyte ?",
+        "Choices": {
+          "A": "un test de vision des couleurs",
+          "B": "un test de sensibilité aux contrastes",
+          "C": "la taille des pupilles en photopique et scotopique",
+          "D": "un test pour définir l'oeil préférentiel"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 220,
+        "Annexes": "",
+        "Question": "Plus l'addition est importante, et plus l'aberration sphérique",
+        "Choices": {
+          "A": "augmente",
+          "B": "diminue"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 221,
+        "Annexes": "",
+        "Question": "Qu'est-ce que le « tricortical » ?",
+        "Choices": {
+          "A": "une notion utilisée en lentille multifocale, pour laisser le cerveau choisir la vision optimale dans la lentille",
+          "B": "une notion utilisée en lentille multifocale, pour gérer la taille de la pupille dans des différentes positions de regard",
+          "C": "une notion qui permet de pouvoir adapter les lentilles multifocales sur des sujets très âgés",
+          "D": "cette notion n'existe pas en contactologie pour le presbyte"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 222,
+        "Annexes": "",
+        "Question": "Qu'est-ce que « la coma » ?",
+        "Choices": {
+          "A": "c'est une aberration optique que l'on peut retrouver en lentilles de contact multifocales",
+          "B": "c'est un système d'observation qui va nous permettre de voir si la lentille est bien centrée sur l'oeil",
+          "C": "c'est un système de gradation qui permet de savoir l'orientation d'une lentille souple multifocale toric",
+          "D": "tout est faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 223,
+        "Annexes": "",
+        "Question": "Lorsque vous réalisez l'observation de votre LSH, pour évaluer la mouillabilité de celle-ci une fois portée par le sujet, il est primordial :",
+        "Choices": {
+          "A": "d'avoir le diffus",
+          "B": "de réaliser un spéculaire avec le système d'observation et d'éclairage alignés",
+          "C": "de mettre le filtre jaune et bleu",
+          "D": "tout est faux"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 224,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de votre LSH, théoriquement, quel examen est à faire en premier dans la liste ci-dessous ?",
+        "Choices": {
+          "A": "analyser le centrage de la lentille",
+          "B": "analyser le recouvrement de la lentille par rapport au limbe",
+          "C": "analyser la mouillabilité de la lentille",
+          "D": "le push up"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 225,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de votre LSH, la norme théorique pour la déshydratation de la lentille est de :",
+        "Choices": {
+          "A": "< 10 secs",
+          "B": "> 2 secs",
+          "C": "> 6 secs",
+          "D": "> 12 secs"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 226,
+        "Annexes": "",
+        "Question": "Le push up :",
+        "Choices": {
+          "A": "est effectué par le praticien, en décentrant la lentille volontairement vers le haut avec son doigt sur la lentille",
+          "B": "doit être lent, pour être certain que la lentille ne bouge pas beaucoup",
+          "C": "doit être très rapide, pour être certain que les déchets accumulés sous la lentille puissent être éliminés",
+          "D": "tout est faux"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 227,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de la LSH, la mouillabilité et la déshydratation sont bons pour vous, elle est centrée sans franchissement limbique, la lentille ne bouge pas au clignement, ni dans les versions latérales et verticales. Gardez-vous déjà la lentille ?",
+        "Choices": {
+          "A": "oui",
+          "B": "non"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 228,
+        "Annexes": "",
+        "Question": "Durant une adaptation en LSH, vous décidez de commencer une adaptation le matin, avant de laisser repartir votre patient pour un essai, il est essentiel :",
+        "Choices": {
+          "A": "qu'il sache les mettre et les enlever",
+          "B": "de lui laisser les lentilles 10 mins, pour ensuite les enlever et faire une prise de fluorescéine afin d'être certain qu'il n'y a aucun risque",
+          "C": "que la mouillabilité soit bonne directement à la pose de la première lentille",
+          "D": "tout est juste"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 229,
+        "Annexes": "",
+        "Question": "Votre sujet a des fluctuations d'AV avec sa lentille LSH sphérique. Aucun problème de vision binoculaire. Il a comme « une impression que ça va mieux quelques secondes après le clignement, mais que ça redevient moins net rapidement ». Vous pensez à :",
+        "Choices": {
+          "A": "une sur-réfraction à faire",
+          "B": "la mouillabilité de la lentille",
+          "C": "la lentille a tendance à effectuer une rotation, il faut analyser si c'est en sens SAM ou SIAM",
+          "D": "franchissement limbique après avoir cligné",
+          "E": "tout est possible"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 230,
+        "Annexes": "",
+        "Question": "Durant une adaptation en LSH, vous examinez au biomicroscope que la lentille est déchirée très légèrement sur 1 mm en son bord supérieur.",
+        "Choices": {
+          "A": "vous laissez tout de même repartir le sujet, ce qui vous importe c'est le centrage en fin de journée avant tout",
+          "B": "vous prévenez votre sujet que la lentille est déchirée légèrement, en cas de gêne dans la journée dans la partie supérieure de la cornée, il faudra l'enlever",
+          "C": "il faudra enlever la lentille de suite et recommander une lentille d'essai",
+          "D": "a + b"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 231,
+        "Annexes": "",
+        "Question": "Si la lentille torique est stabilisée et compense bien l'astigmatisme, la sur-réfraction doit être :",
+        "Choices": {
+          "A": "sphérique",
+          "B": "torique",
+          "C": "on ne fait pas de sur-réfraction sur une lentille torique",
+          "D": "tout est faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 232,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de votre LST, le sujet se plaint légèrement de sa vision, « flou tout le temps ». En effectuant votre sur-réfraction, vous avez une sur-réfraction légèrement torique. La lentille est pourtant bien axée et stabilisée, vous pensez à :",
+        "Choices": {
+          "A": "la valeur de la sphère",
+          "B": "la valeur du cylindre",
+          "C": "une mouillabilité de la lentille non acceptable",
+          "D": "une rotation de la lentille"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 233,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de votre LST, sur l'analyse de la rotation sur l'OD, vous remarquez que la gravure à 270° est décentrée de 10° vers le côté temporal du sujet. Il y a donc une rotation:",
+        "Choices": {
+          "A": "de 10° SIAM",
+          "B": "de 10° SAM"
+        },
+        "Answer": "B"
       },
-      "Answer": "C"
-    }
+      {
+        "Id": 234,
+        "Annexes": "",
+        "Question": "L'axe de l'astigmatisme total est de 170°, c'est aussi l'axe de la première lentille d'essai. En prenant en compte la rotation ci-dessus, qu'allez-vous recommander?",
+        "Choices": {
+          "A": "un axe à 170°",
+          "B": "un axe à 180°",
+          "C": "un axe à 160°",
+          "D": "tout est faux"
+        },
+        "Answer": "B"
+      },
+      {
+        "Id": 235,
+        "Annexes": "",
+        "Question": "Durant l'évaluation de votre LST, sur l'analyse de la rotation sur l'OG, vous remarquez que la gravure à 270° est décentrée de 10° vers le côté temporal du sujet. Il y a donc une rotation:",
+        "Choices": {
+          "A": "de 10° SAM",
+          "B": "de 10° SIAM"
+        },
+        "Answer": "B"
+      },
+      {
+        "Id": 236,
+        "Annexes": "",
+        "Question": "L'axe de l'astigmatisme totale est de 80°, c'est aussi l'axe de la première lentille d'essai. En prenant en compte la rotation ci-dessus, qu'allez-vous recommander?",
+        "Choices": {
+          "A": "un axe à 80°",
+          "B": "un axe à 90°",
+          "C": "un axe à 70°",
+          "D": "tout est faux"
+        },
+        "Answer": "C"
+      }
+    ],
+    [
+      {
+        "Id": 237,
+        "Annexes": "",
+        "Question": "Votre sujet a une LS sph sur l'OD et une LST sur l'OG. Quel type de stabilisateur peut vous crée le plus de phorie verticale ?",
+        "Choices": {
+          "A": "un ballast",
+          "B": "la technologie Eyelid Stabilised Design",
+          "C": "la technologie Précision Balance 8/4 Design",
+          "D": "un stabilisateur ne crée pas de phorie verticale"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 238,
+        "Annexes": "",
+        "Question": "Quel type de lentille ne donnera pas un bon résultat en terme d'acuité visuelle pour ce sujet ? Kératométrie : 7,80 à 180°/ 8.00 à 90° Rx=-3.00 (-1.00)90°.",
+        "Choices": {
+          "A": "LRPG sph",
+          "B": "LSH sph",
+          "C": "LSH toric",
+          "D": "LRPG avec une géométrie asph."
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 239,
+        "Annexes": "",
+        "Question": "Votre sujet s'entraine 5x par semaine et a besoin de lentilles, quel serait le choix le moins dangereux pour lui ? Rx -3.25 ODG.",
+        "Choices": {
+          "A": "des lentilles journalières jetables",
+          "B": "des lentilles souples mensuelles",
+          "C": "une lentille rigide",
+          "D": "un masque avec sa correction intégrée"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 240,
+        "Annexes": "",
+        "Question": "D'où peuvent provenir les dépôts ?",
+        "Choices": {
+          "A": "les larmes",
+          "B": "la pollution",
+          "C": "le maquillage",
+          "D": "tout est juste"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 241,
+        "Annexes": "",
+        "Question": "L'excès de dépôts lipidique :",
+        "Choices": {
+          "A": "peut baisser la qualité visuelle du sujet",
+          "B": "peut provoquer une sensation d'inconfort",
+          "C": "va rendre la surface de la lentille hydrophobe",
+          "D": "a+b+c",
+          "E": "a + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 242,
+        "Annexes": "",
+        "Question": "Un conservateur est un principe actif qui :",
+        "Choices": {
+          "A": "détruit les micro-organismes",
+          "B": "limite le développement des micro-organismes",
+          "C": "permet la stérilisation",
+          "D": "va permettre de diminuer la concentration de germe"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 243,
+        "Annexes": "",
+        "Question": "Les solutions tampons permettent de garantir un pH constant.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 244,
+        "Annexes": "",
+        "Question": "Qu'est-ce qui n'est pas un système tampon?",
+        "Choices": {
+          "A": "borate",
+          "B": "citrate",
+          "C": "phosphate",
+          "D": "ils le sont tous"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 245,
+        "Annexes": "",
+        "Question": "Dans une solution hypertonique, une LSH va:",
+        "Choices": {
+          "A": "absorber les ions de la solution",
+          "B": "se rétracter en reléguant dans la solution une partie de son eau incluse",
+          "C": "absorber l'eau de la solution et gonfler",
+          "D": "a + b",
+          "E": "a + c"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 246,
+        "Annexes": "",
+        "Question": "Un pH est dit acide quand il est :",
+        "Choices": {
+          "A": "< 7 unités",
+          "B": "entre 7 et 8 unités",
+          "C": "> 7 unités",
+          "D": "> 8 unités"
+        },
+        "Answer": "A"
+      }
+    ],
+    [
+      {
+        "Id": 247,
+        "Annexes": "",
+        "Question": "Vous utilisez des lentilles avec une solution multifonctions, quel type de lentille n'a pas forcément besoin de déprotéinisant?",
+        "Choices": {
+          "A": "LRPG",
+          "B": "lentilles souples trimestrielles",
+          "C": "lentilles sclérales",
+          "D": "lentilles souples bi-mensuelles"
+        },
+        "Answer": "D"
+      }
+    ],
+    [
+      {
+        "Id": 248,
+        "Annexes": "",
+        "Question": "Le rinçage de la lentille va vous permettre d'éliminer les germes à la surface de la lentille.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 249,
+        "Annexes": "",
+        "Question": "Toutes les lentilles ayant été dans des produits multifonctions doivent être obligatoirement rincées avant leur pose sur un oeil.",
+        "Choices": {
+          "A": "vrai",
+          "B": "faux"
+        },
+        "Answer": "B"
+      }
+    ],
+    [
+      {
+        "Id": 250,
+        "Annexes": "",
+        "Question": "Un oxydant peut être intéressant pour :",
+        "Choices": {
+          "A": "les larmes chargées",
+          "B": "des lentilles journalières en LST",
+          "C": "des sujets intolérants aux conservateurs",
+          "D": "a + c"
+        },
+        "Answer": "D"
+      }
+    ]
   ]
 }
