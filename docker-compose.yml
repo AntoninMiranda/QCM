@@ -1,4 +1,22 @@
 ﻿services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=qcmdb
+      - POSTGRES_USER=qcmuser
+      - POSTGRES_PASSWORD=qcmpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U qcmuser -d qcmdb" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  
   backend:
     build:
       context: ./backend/backend/
@@ -26,24 +44,6 @@
       - NEXT_PUBLIC_API_URL=https://api.mirandaandcie.fr
     networks:
       - app-network
-
-  postgres:
-    image: postgres:16-alpine
-    environment:
-      - POSTGRES_DB=qcmdb
-      - POSTGRES_USER=qcmuser
-      - POSTGRES_PASSWORD=qcmpassword
-    ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - app-network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U qcmuser -d qcmdb"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
 networks:
   app-network:
