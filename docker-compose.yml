@@ -9,7 +9,8 @@
       - ASPNETCORE_URLS=http://0.0.0.0:5000
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=qcmdb;Username=qcmuser;Password=qcmpassword
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     networks:
       - app-network
 
