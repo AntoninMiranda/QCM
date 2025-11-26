@@ -1,6 +1,149 @@
 @backend_HostAddress = http://localhost:5079
+@token = your-jwt-token-here
 
-GET {{backend_HostAddress}}/weatherforecast/
+### Test Home
+GET {{backend_HostAddress}}/
 Accept: application/json
 
 ###
+
+### Register User
+POST {{backend_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "Password123",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+
+###
+
+### Login User
+POST {{backend_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "Password123"
+}
+
+###
+
+### Get Profile (requires authentication)
+GET {{backend_HostAddress}}/api/auth/profile
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Update Profile (requires authentication)
+PUT {{backend_HostAddress}}/api/auth/profile
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "username": "newusername",
+  "firstName": "Jane",
+  "lastName": "Smith"
+}
+
+###
+
+### Update Profile with Password (requires authentication)
+PUT {{backend_HostAddress}}/api/auth/profile
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "currentPassword": "Password123",
+  "newPassword": "NewPassword456"
+}
+
+###
+
+### Get QCM Categories
+GET {{backend_HostAddress}}/api/qcm/categories
+Accept: application/json
+
+###
+
+### Get QCM Questions by Category (random selection)
+GET {{backend_HostAddress}}/api/qcm?category=Contactologie&count=10
+Accept: application/json
+
+###
+
+### Get All QCM Questions from All Categories (random)
+GET {{backend_HostAddress}}/api/qcm?count=20
+Accept: application/json
+
+###
+
+### Save Score (requires authentication)
+POST {{backend_HostAddress}}/api/score
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "qcmType": "Contactologie",
+  "category": "Lentilles souples",
+  "totalQuestions": 10,
+  "correctAnswers": 8,
+  "incorrectAnswers": 2,
+  "timeSpentSeconds": 300,
+  "details": "{\"questionIds\": [1, 2, 3]}"
+}
+
+###
+
+### Get My Scores (requires authentication)
+GET {{backend_HostAddress}}/api/score
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get My Scores - Filtered by Type and Category
+GET {{backend_HostAddress}}/api/score?qcmType=Contactologie&category=Lentilles%20souples&limit=20
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get My Statistics (requires authentication)
+GET {{backend_HostAddress}}/api/score/stats
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get Graph Data (requires authentication)
+GET {{backend_HostAddress}}/api/score/graph?days=30
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get Graph Data - Filtered
+GET {{backend_HostAddress}}/api/score/graph?qcmType=Contactologie&days=7
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get Score by ID (requires authentication)
+GET {{backend_HostAddress}}/api/score/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Delete Score (requires authentication)
+DELETE {{backend_HostAddress}}/api/score/1
+Authorization: Bearer {{token}}
+
+###
+

@@ -3,9 +3,14 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
+import Link from "next/link";
 import { getData } from "@/api";
 import { Card, CardHeader, CardTitle, CardContent, CardAction, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
+import { QcmParameterType, QcmParameterCategory } from "@/lib/parameter";
+import { useAuth } from "@/hooks/useAuth";
 
 function QuestionModule({ question, selected, setSelected, validated, index }: {
     question: any;
@@ -96,7 +101,6 @@ function ResultModule({ result, handleRestart }: {
     result: { score: number; total: number };
     handleRestart: () => void
 }) {
-    // Le reste du code reste inchangé
     const router = useRouter();
 
     return (
@@ -114,8 +118,8 @@ function ResultModule({ result, handleRestart }: {
                     <p className="text-blue-600">Essayez encore pour améliorer votre score.</p>
                 )}
             </CardContent>
-            <CardFooter className="flex justify-end">
-                <Button onClick={() => router.push("/")}>Accueil</Button>
+            <CardFooter className="flex justify-end gap-2">
+                <Button onClick={() => router.push("/qcm")} variant="outline">Nouveau QCM</Button>
                 <Button onClick={handleRestart}>Recommencer</Button>
             </CardFooter>
         </Card>
@@ -131,18 +135,36 @@ function QcmPageContent() {
     const [result, setResult] = useState<{ score: number; total: number }>({ score: 0, total: 0 });
     const [showResult, setShowResult] = useState(false);
     const searchParams = useSearchParams();
+    const router = useRouter();
+    const { isAuthenticated, user, isLoading: authLoading } = useAuth();
     const qcmType = searchParams.get("type");
     const qcmCategory = searchParams.get("category") || null;
     const qcmCount = searchParams.get("count") || null;
 
+    // État pour le formulaire de sélection
+    const [selectedType, setSelectedType] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedCount, setSelectedCount] = useState("");
+    const [hasParameters, setHasParameters] = useState(false);
+
     useEffect(() => {
-        let parameter = "?";
-        parameter += `type=${qcmType}&`;
-        if (qcmCategory) parameter += `category=${qcmCategory}&`;
-        if (qcmCount) parameter += `count=${qcmCount}`;
-        getData(parameter)
-            .then((res) => setData(res))
-            .catch((err) => setError(err.message));
+        // Vérifier si des paramètres sont fournis
+        if (qcmType || qcmCategory || qcmCount) {
+            setHasParameters(true);
+            let parameter = "?";
+            if (qcmType) parameter += `type=${qcmType}&`;
+            if (qcmCategory) parameter += `category=${qcmCategory}&`;
+            if (qcmCount) parameter += `count=${qcmCount}`;
+
+            // Récupérer le token depuis localStorage
+            const token = localStorage.getItem('token');
+
+            getData(parameter, token || undefined)
+                .then((res) => setData(res))
+                .catch((err) => setError(err.message));
+        } else {
+            setHasParameters(false);
+        }
     }, [qcmType, qcmCategory, qcmCount]);
 
     useEffect(() => {
@@ -198,28 +220,140 @@ function QcmPageContent() {
         setResult({ score: 0, total: data.flat().length });
     };
 
+    const handleStartQcm = () => {
+        let parameters = "?";
+        if (selectedType) parameters += `type=${selectedType}&`;
+        if (selectedCategory) parameters += `category=${selectedCategory}&`;
+        if (selectedCount) parameters += `count=${selectedCount}`;
+        router.push(`/qcm${parameters}`);
+    };
+
+    // Vérifier l'authentification
+    useEffect(() => {
+        if (!authLoading && !isAuthenticated) {
+            router.push("/login");
+        }
+    }, [isAuthenticated, authLoading, router]);
+
+    if (authLoading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center">
+                <p>Chargement...</p>
+            </div>
+        );
+    }
+
+    if (!isAuthenticated) {
+        return null;
+    }
+
     return (
-        <div className="flex items-center justify-center min-h-screen">
+        <div className="font-sans min-h-screen">
+            {/* Navigation */}
+            <nav className="border-b">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex justify-between items-center h-16">
+                        <Link href="/" className="flex-shrink-0">
+                            <h1 className="text-xl font-bold">QCM App</h1>
+                        </Link>
+                        <div className="flex gap-4 items-center">
+                            <span className="text-sm">
+                                Bonjour, {user?.username}
+                            </span>
+                            <Link href="/profile">
+                                <Button variant="outline">Mon profil</Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Main Content */}
+            <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] p-4">
             <div>
-                {error && <p>Erreur: {error}</p>}
-                {!showResult && data.length > 0 && data[currentIndex] ? (
-                    <QcmModule
-                        questions={data[currentIndex]}
-                        selectedAnswers={selectedAnswers}
-                        setSelectedAnswer={handleSetSelected}
-                        validated={validated}
-                        onValidate={handleValidate}
-                        onNext={handleNext}
-                    />
-                ) : showResult ? (
-                    <ResultModule
-                        result={result}
-                        handleRestart={handleRestart}
-                    />
+                {!hasParameters ? (
+                    // Formulaire de sélection des paramètres
+                    <Card className="w-full max-w-md">
+                        <CardHeader>
+                            <CardTitle>Paramètres du QCM</CardTitle>
+                        </CardHeader>
+                        <CardContent className="flex flex-col gap-4">
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium">Type de question</label>
+                                <Select value={selectedType} onValueChange={setSelectedType}>
+                                    <SelectTrigger>
+                                        <SelectValue placeholder="Type de question..." />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        {QcmParameterType.map(opt => (
+                                            <SelectItem key={opt.value} value={opt.value}>
+                                                {opt.label}
+                                            </SelectItem>
+                                        ))}
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium">Catégorie</label>
+                                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                                    <SelectTrigger>
+                                        <SelectValue placeholder="Catégorie de question..." />
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        {QcmParameterCategory.map(opt => (
+                                            <SelectItem key={opt.value} value={opt.value}>
+                                                {opt.label}
+                                            </SelectItem>
+                                        ))}
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                            <div className="space-y-2">
+                                <label className="text-sm font-medium">Nombre de questions</label>
+                                <Input
+                                    type="number"
+                                    min={1}
+                                    value={selectedCount}
+                                    onChange={e => setSelectedCount(e.target.value)}
+                                    placeholder="Nombre de questions"
+                                />
+                            </div>
+                        </CardContent>
+                        <CardFooter className="flex justify-end">
+                            <Button
+                                variant="default"
+                                disabled={!selectedType && !selectedCategory && !selectedCount}
+                                onClick={handleStartQcm}
+                            >
+                                Commencer
+                            </Button>
+                        </CardFooter>
+                    </Card>
                 ) : (
-                    <Card><CardContent>Chargement des questions...</CardContent></Card>
+                    // Affichage du QCM ou du résultat
+                    <>
+                        {error && <p className="text-red-500 mb-4">Erreur: {error}</p>}
+                        {!showResult && data.length > 0 && data[currentIndex] ? (
+                            <QcmModule
+                                questions={data[currentIndex]}
+                                selectedAnswers={selectedAnswers}
+                                setSelectedAnswer={handleSetSelected}
+                                validated={validated}
+                                onValidate={handleValidate}
+                                onNext={handleNext}
+                            />
+                        ) : showResult ? (
+                            <ResultModule
+                                result={result}
+                                handleRestart={handleRestart}
+                            />
+                        ) : (
+                            <Card><CardContent className="pt-6">Chargement des questions...</CardContent></Card>
+                        )}
+                    </>
                 )}
             </div>
+        </div>
         </div>
     );
 }

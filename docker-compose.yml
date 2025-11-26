@@ -7,6 +7,9 @@
       - "5000:5000"
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=qcmdb;Username=qcmuser;Password=qcmpassword
+    depends_on:
+      - postgres
     networks:
       - app-network
 
@@ -19,6 +22,29 @@
     networks:
       - app-network
 
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_DB=qcmdb
+      - POSTGRES_USER=qcmuser
+      - POSTGRES_PASSWORD=qcmpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qcmuser -d qcmdb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+

@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using System.Text.Json;
 
-namespace WebApplication1.Controllers;
+namespace Backend.Controllers;
 
-
+[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class QcmController : ControllerBase
