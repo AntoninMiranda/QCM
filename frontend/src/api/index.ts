@@ -1,6 +1,5 @@
 // src/api/index.ts
-// const BASE_URL = 'https://api.mirandaandcie.fr';
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = process.env.BACKEND_URL
 
 export async function getData(parameter: string, token?: string) {
     let url: string = `${BASE_URL}/Qcm${parameter}`;

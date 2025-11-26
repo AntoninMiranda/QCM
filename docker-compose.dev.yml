@@ -20,7 +20,7 @@
     ports:
       - "3000:3000"
     environment:
-      - BACKEND_URL=https://api.mirandaandcie.fr
+      - BACKEND_URL=http://localhost:5000
     networks:
       - app-network
 
