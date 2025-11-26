@@ -88,24 +88,48 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
     
     // Retry logic pour attendre que PostgreSQL soit prêt
-    var maxRetries = 10;
-    var delay = TimeSpan.FromSeconds(2);
+    var maxRetries = 15;
+    var delay = TimeSpan.FromSeconds(3);
     
     for (int i = 0; i < maxRetries; i++)
     {
         try
         {
-            dbContext.Database.Migrate();
-            Console.WriteLine("✅ Migrations appliquées avec succès");
-            break;
-        }
-        catch (Npgsql.NpgsqlException ex)
-        {
-            if (i == maxRetries - 1) throw;
+            logger.LogInformation($"Tentative de connexion à la base de données ({i + 1}/{maxRetries})...");
             
-            Console.WriteLine($"⏳ PostgreSQL pas encore prêt, tentative {i + 1}/{maxRetries}...");
+            // Test de connexion
+            if (dbContext.Database.CanConnect())
+            {
+                logger.LogInformation("Connexion à la base de données réussie");
+                
+                // Appliquer les migrations
+                dbContext.Database.Migrate();
+                logger.LogInformation("✅ Migrations appliquées avec succès");
+                break;
+            }
+            else
+            {
+                logger.LogWarning("Impossible de se connecter à la base de données");
+                if (i == maxRetries - 1)
+                {
+                    throw new Exception("Impossible de se connecter à PostgreSQL après " + maxRetries + " tentatives");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, $"Erreur lors de la tentative {i + 1}/{maxRetries}: {ex.Message}");
+            
+            if (i == maxRetries - 1)
+            {
+                logger.LogError("❌ Échec de la connexion après toutes les tentatives");
+                throw;
+            }
+            
+            logger.LogInformation($"⏳ Nouvelle tentative dans {delay.TotalSeconds} secondes...");
             Thread.Sleep(delay);
         }
     }
