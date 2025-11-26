@@ -88,8 +88,29 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    dbContext.Database.Migrate();
+    
+    // Retry logic pour attendre que PostgreSQL soit prêt
+    var maxRetries = 10;
+    var delay = TimeSpan.FromSeconds(2);
+    
+    for (int i = 0; i < maxRetries; i++)
+    {
+        try
+        {
+            dbContext.Database.Migrate();
+            Console.WriteLine("✅ Migrations appliquées avec succès");
+            break;
+        }
+        catch (Npgsql.NpgsqlException ex)
+        {
+            if (i == maxRetries - 1) throw;
+            
+            Console.WriteLine($"⏳ PostgreSQL pas encore prêt, tentative {i + 1}/{maxRetries}...");
+            Thread.Sleep(delay);
+        }
+    }
 }
+
 
 // Configuration de Swagger UI
 app.UseSwagger();
