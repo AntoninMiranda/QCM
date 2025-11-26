@@ -3,6 +3,10 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Argument de build pour l'URL de l'API
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
 # Copier les fichiers de configuration et de dépendances
 COPY package*.json ./
 COPY tsconfig.json ./
@@ -17,7 +21,7 @@ RUN npm install
 COPY src ./src
 COPY public ./public
 
-# Build Next.js
+# Build Next.js avec la variable d'environnement
 RUN npm run build
 
 # Étape 2 : Runtime

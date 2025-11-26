@@ -4,7 +4,7 @@
       context: ./backend/backend/
       dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "5079:5000"
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:5000
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=qcmdb;Username=qcmuser;Password=qcmpassword
@@ -17,6 +17,8 @@
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:5000
     ports:
       - "3000:3000"
     environment:

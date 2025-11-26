@@ -1,5 +1,5 @@
 // src/api/index.ts
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5079'
 
 export async function getData(parameter: string, token?: string) {
     let url: string = `${BASE_URL}/Qcm${parameter}`;

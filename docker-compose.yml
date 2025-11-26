@@ -17,6 +17,8 @@
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: https://api.mirandaandcie.fr
     ports:
       - "3000:3000"
     environment:
