@@ -96,6 +96,7 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         }));
     };
 
+
     const handleNext = () => {
         setValidated(false);
         nextQuestion();
@@ -161,6 +162,25 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         router.push(`/qcm${parameters}`);
     };
 
+    const handleNewQcm = () => {
+        // Réinitialiser TOUS les états
+        setShowResult(false);
+        setCurrentIndex(0);
+        setSelectedAnswers([]);
+        setValidated(false);
+        setResult({ score: 0, total: 0 });
+        setStartTime(Date.now());
+        setQuestionDetails([]);
+        setIsSavingScore(false);
+        setIsFirstAttempt(true);
+        setData([]);
+        setError(null);
+        setHasParameters(false);
+
+        // Naviguer vers la page de sélection
+        router.push("/qcm");
+    };
+
     const handleSaveScore = () => {
         if (isFirstAttempt && result.score >= 0) {
             saveScoreToBackend(result.score, questionDetails);
@@ -178,6 +198,7 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         showResult,
         hasParameters,
         isFirstAttempt,
+        totalPages: data.length,
 
         // Fonctions
         handleSetSelected,
@@ -185,6 +206,7 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         handleNext,
         handleRestart,
         handleStartQcm,
+        handleNewQcm,
         handleSaveScore
     };
 }

@@ -2,7 +2,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -12,11 +11,11 @@ interface ResultModuleProps {
         total: number
     };
     handleRestart: () => void;
+    handleNewQcm: () => void;
     onSaveScore?: () => void | Promise<void>;
 }
 
-export function ResultModule({ result, handleRestart, onSaveScore }: ResultModuleProps) {
-    const router = useRouter();
+export function ResultModule({ result, handleRestart, handleNewQcm, onSaveScore }: ResultModuleProps) {
     const hasSaved = useRef(false);
 
     // Sauvegarder le score au montage du composant (première fois uniquement)
@@ -43,7 +42,7 @@ export function ResultModule({ result, handleRestart, onSaveScore }: ResultModul
                 )}
             </CardContent>
             <CardFooter className="flex justify-end gap-2">
-                <Button onClick={() => router.push("/qcm")} variant="outline">
+                <Button onClick={handleNewQcm} variant="outline">
                     Nouveau QCM
                 </Button>
                 <Button onClick={handleRestart}>

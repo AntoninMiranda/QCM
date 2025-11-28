@@ -12,6 +12,8 @@ interface QcmModuleProps {
     validated: boolean;
     onValidate: () => void;
     onNext: () => void;
+    currentPage: number;
+    totalPages: number;
 }
 
 export function QcmModule({
@@ -20,7 +22,9 @@ export function QcmModule({
     setSelectedAnswer,
     validated,
     onValidate,
-    onNext
+    onNext,
+    currentPage,
+    totalPages
 }: QcmModuleProps) {
     return (
         <Card className="w-full max-w-xl min-w-[350px] flex flex-col justify-between">
@@ -36,7 +40,10 @@ export function QcmModule({
                     />
                 ))}
             </CardContent>
-            <CardFooter className="flex justify-end">
+            <CardFooter className="flex justify-between items-center">
+                <span className="text-sm text-muted-foreground font-medium">
+                    {currentPage + 1}/{totalPages}
+                </span>
                 {validated ? (
                     <Button variant="default" onClick={onNext}>
                         Page suivante

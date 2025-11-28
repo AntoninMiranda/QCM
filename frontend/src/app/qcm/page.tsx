@@ -38,11 +38,13 @@ function QcmPageContent() {
         showResult,
         hasParameters,
         isFirstAttempt,
+        totalPages,
         handleSetSelected,
         handleValidate,
         handleNext,
         handleRestart,
         handleStartQcm: startQcm,
+        handleNewQcm,
         handleSaveScore
     } = useQcmLogic({ qcmType, qcmCategory, qcmCount });
 
@@ -96,11 +98,14 @@ function QcmPageContent() {
                                     validated={validated}
                                     onValidate={handleValidate}
                                     onNext={handleNext}
+                                    currentPage={currentIndex}
+                                    totalPages={totalPages}
                                 />
                             ) : showResult ? (
                                 <ResultModule
                                     result={result}
                                     handleRestart={handleRestart}
+                                    handleNewQcm={handleNewQcm}
                                     onSaveScore={isFirstAttempt ? handleSaveScore : undefined}
                                 />
                             ) : (
