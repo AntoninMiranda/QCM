@@ -1,6 +1,7 @@
 ﻿services:
   postgres:
     image: postgres:16-alpine
+    container_name: qcm-postgres-prod
     environment:
       - POSTGRES_DB=qcmdb
       - POSTGRES_USER=qcmuser
@@ -16,14 +17,18 @@
       interval: 10s
       timeout: 5s
       retries: 5
-  
+    restart: unless-stopped
+
   backend:
     build:
       context: ./backend/backend/
       dockerfile: Dockerfile
+      target: final
+    container_name: qcm-backend-prod
     ports:
       - "5000:5000"
     environment:
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://0.0.0.0:5000
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=qcmdb;Username=qcmuser;Password=qcmpassword
     depends_on:
@@ -31,25 +36,32 @@
         condition: service_healthy
     networks:
       - app-network
+    restart: unless-stopped
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      target: runner
       args:
         NEXT_PUBLIC_API_URL: https://api.mirandaandcie.fr
+    container_name: qcm-frontend-prod
     ports:
       - "3000:3000"
     environment:
       - NEXT_PUBLIC_API_URL=https://api.mirandaandcie.fr
+      - NODE_ENV=production
     networks:
       - app-network
+    restart: unless-stopped
 
 networks:
   app-network:
     driver: bridge
+    name: qcm-network-prod
 
 volumes:
   postgres_data:
     driver: local
+    name: qcm-postgres-data-prod
 

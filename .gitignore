@@ -14,8 +14,9 @@
 **/azds.yaml
 **/bin
 **/charts
-**/docker-compose*
-**/Dockerfile*
+# Les fichiers docker-compose et Dockerfile sont maintenant versionnés
+# **/docker-compose*
+# **/Dockerfile*
 **/next
 **/out/
 **/node_modules

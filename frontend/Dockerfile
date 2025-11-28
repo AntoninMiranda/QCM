@@ -1,4 +1,25 @@
-﻿# Étape 1 : Build
+﻿# Stage de développement avec hot reload
+FROM node:20-alpine AS development
+
+WORKDIR /app
+
+# Copier les fichiers de configuration
+COPY package*.json ./
+COPY tsconfig.json ./
+COPY next.config.ts ./
+COPY tailwind.config.js ./
+COPY postcss.config.mjs ./
+COPY components.json ./
+
+# Installer les dépendances
+RUN npm install
+
+# Le code source sera monté via volume
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
+
+# Étape 1 : Build pour la production
 FROM node:20-alpine AS builder
 
 WORKDIR /app
@@ -24,7 +45,7 @@ COPY public ./public
 # Build Next.js avec la variable d'environnement
 RUN npm run build
 
-# Étape 2 : Runtime
+# Étape 2 : Runtime pour la production
 FROM node:20-alpine AS runner
 
 WORKDIR /app

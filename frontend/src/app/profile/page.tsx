@@ -7,15 +7,19 @@ import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { authApi } from "@/api";
+import { authApi, scoreApi } from "@/api";
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 export default function ProfilePage() {
     const { user, token, isAuthenticated, logout, updateUser, isLoading: authLoading } = useAuth();
     const router = useRouter();
     const [isEditing, setIsEditing] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [scores, setScores] = useState<any[]>([]);
+    const [stats, setStats] = useState<any>(null);
+    const [loadingStats, setLoadingStats] = useState(true);
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -44,6 +48,31 @@ export default function ProfilePage() {
             });
         }
     }, [user, isAuthenticated, authLoading, router]);
+
+    useEffect(() => {
+        const loadStats = async () => {
+            if (!token || !isAuthenticated) return;
+
+            try {
+                setLoadingStats(true);
+                const [scoresData, statsData] = await Promise.all([
+                    scoreApi.getMyScores(token, { limit: 40 }),
+                    scoreApi.getMyStats(token)
+                ]);
+                setScores(scoresData);
+                setStats(statsData);
+            } catch (error: any) {
+                console.error('Erreur lors du chargement des statistiques:', error);
+                toast.error(error.message || 'Erreur lors du chargement des statistiques');
+            } finally {
+                setLoadingStats(false);
+            }
+        };
+
+        if (isAuthenticated && token) {
+            loadStats();
+        }
+    }, [token, isAuthenticated]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({
@@ -295,9 +324,98 @@ export default function ProfilePage() {
                         <CardDescription>Vos performances aux QCM</CardDescription>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-sm text-muted-foreground">
-                            Les statistiques seront bientôt disponibles.
-                        </p>
+                        {loadingStats ? (
+                            <div className="flex justify-center items-center py-8">
+                                <p className="text-sm text-muted-foreground">Chargement des statistiques...</p>
+                            </div>
+                        ) : scores.length === 0 ? (
+                            <p className="text-sm text-muted-foreground">
+                                Aucune statistique disponible. Commencez par faire un QCM !
+                            </p>
+                        ) : (
+                            <div className="space-y-6">
+                                {/* Résumé des statistiques */}
+                                {stats && (
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                        <div className="space-y-1">
+                                            <p className="text-sm text-muted-foreground">QCM complétés</p>
+                                            <p className="text-2xl font-bold">{stats.totalQcmsCompleted}</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="text-sm text-muted-foreground">Score moyen</p>
+                                            <p className="text-2xl font-bold">{stats.averageScore.toFixed(1)}%</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="text-sm text-muted-foreground">Questions répondues</p>
+                                            <p className="text-2xl font-bold">{stats.totalQuestionsAnswered}</p>
+                                        </div>
+                                        <div className="space-y-1">
+                                            <p className="text-sm text-muted-foreground">Bonnes réponses</p>
+                                            <p className="text-2xl font-bold">{stats.totalCorrectAnswers}</p>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Graphique des scores */}
+                                <div className="space-y-2">
+                                    <h3 className="text-lg font-semibold">Évolution des scores (40 derniers QCM)</h3>
+                                    <div className="h-[400px] w-full">
+                                        <ResponsiveContainer width="100%" height="100%">
+                                            <LineChart
+                                                data={scores.slice(0, 40).reverse().map((score, index) => ({
+                                                    index: index + 1,
+                                                    score: score.percentage,
+                                                    category: score.category || 'N/A',
+                                                    date: new Date(score.completedAt).toLocaleDateString('fr-FR', {
+                                                        day: '2-digit',
+                                                        month: '2-digit'
+                                                    })
+                                                }))}
+                                                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                                            >
+                                                <CartesianGrid strokeDasharray="3 3" />
+                                                <XAxis
+                                                    dataKey="index"
+                                                    label={{ value: 'QCM', position: 'insideBottom', offset: -5 }}
+                                                />
+                                                <YAxis
+                                                    domain={[0, 100]}
+                                                    label={{ value: 'Score (%)', angle: -90, position: 'insideLeft' }}
+                                                />
+                                                <Tooltip
+                                                    content={({ active, payload }) => {
+                                                        if (active && payload && payload.length) {
+                                                            const data = payload[0].payload;
+                                                            return (
+                                                                <div className="bg-white dark:bg-gray-800 p-3 border rounded-lg shadow-lg">
+                                                                    <p className="font-semibold">QCM #{data.index}</p>
+                                                                    <p className="text-sm text-muted-foreground">{data.date}</p>
+                                                                    <p className="text-sm">Catégorie: {data.category}</p>
+                                                                    <p className="text-lg font-bold text-blue-600">
+                                                                        Score: {data.score.toFixed(1)}%
+                                                                    </p>
+                                                                </div>
+                                                            );
+                                                        }
+                                                        return null;
+                                                    }}
+                                                />
+                                                <Legend />
+                                                <Line
+                                                    type="monotone"
+                                                    dataKey="score"
+                                                    stroke="#2563eb"
+                                                    strokeWidth={2}
+                                                    dot={{ fill: '#2563eb', r: 4 }}
+                                                    activeDot={{ r: 6 }}
+                                                    name="Score (%)"
+                                                />
+                                            </LineChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </CardContent>
                 </Card>
             </div>
