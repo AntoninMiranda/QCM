@@ -7,7 +7,7 @@ namespace Backend.Controllers;
 /// Exemple de contrôleur montrant comment utiliser la base de données
 /// </summary>
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class DatabaseTestController : ControllerBase
 {
     private readonly ApplicationDbContext _context;

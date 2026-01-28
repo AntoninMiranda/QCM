@@ -25,8 +25,18 @@ public class User
     [MaxLength(100)]
     public string? LastName { get; set; }
     
+    [Required]
+    [MaxLength(50)]
+    public string Role { get; set; } = "User";
+    
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     
     public DateTime? UpdatedAt { get; set; }
+}
+
+public static class UserRoles
+{
+    public const string Admin = "Admin";
+    public const string User = "User";
 }
 

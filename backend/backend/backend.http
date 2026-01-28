@@ -147,3 +147,107 @@ Authorization: Bearer {{token}}
 
 ###
 
+# ============================================
+# ADMIN ROUTES (Admin role required)
+# ============================================
+
+### Get All Users (Admin only)
+GET {{backend_HostAddress}}/api/admin/users?page=1&pageSize=20
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get All Users - With filters (Admin only)
+GET {{backend_HostAddress}}/api/admin/users?search=test&role=User&page=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get User By ID (Admin only)
+GET {{backend_HostAddress}}/api/admin/users/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Get User Scores (Admin only)
+GET {{backend_HostAddress}}/api/admin/users/1/scores?limit=50
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+
+### Update User (Admin only)
+PUT {{backend_HostAddress}}/api/admin/users/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "username": "updateduser",
+  "email": "updated@example.com",
+  "firstName": "Updated",
+  "lastName": "User",
+  "role": "Admin"
+}
+
+###
+
+### Update User Password (Admin only)
+PUT {{backend_HostAddress}}/api/admin/users/2
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "newPassword": "NewSecurePassword123"
+}
+
+###
+
+### Delete User (Admin only)
+DELETE {{backend_HostAddress}}/api/admin/users/2
+Authorization: Bearer {{token}}
+
+###
+
+### Promote User to Admin (Admin only)
+POST {{backend_HostAddress}}/api/admin/users/2/promote
+Authorization: Bearer {{token}}
+
+###
+
+### Demote Admin to User (Admin only)
+POST {{backend_HostAddress}}/api/admin/users/2/demote
+Authorization: Bearer {{token}}
+
+###
+
+### Delete User Score (Admin only)
+DELETE {{backend_HostAddress}}/api/admin/users/2/scores/1
+Authorization: Bearer {{token}}
+
+###
+
+### Delete Multiple User Scores (Admin only)
+POST {{backend_HostAddress}}/api/admin/users/2/scores/delete-multiple
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+[1, 2, 3, 4, 5]
+
+###
+
+### Delete All User Scores (Admin only)
+DELETE {{backend_HostAddress}}/api/admin/users/2/scores
+Authorization: Bearer {{token}}
+
+###
+
+### Get Statistics (Admin only)
+GET {{backend_HostAddress}}/api/admin/statistics
+Authorization: Bearer {{token}}
+Accept: application/json
+
+###
+

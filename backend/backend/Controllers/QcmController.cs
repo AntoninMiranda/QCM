@@ -7,7 +7,7 @@ namespace Backend.Controllers;
 
 [Authorize]
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class QcmController : ControllerBase
 {
     [HttpGet]

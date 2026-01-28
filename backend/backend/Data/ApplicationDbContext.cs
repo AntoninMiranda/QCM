@@ -22,6 +22,7 @@ public class ApplicationDbContext : DbContext
         {
             entity.HasIndex(e => e.Email).IsUnique();
             entity.HasIndex(e => e.Username).IsUnique();
+            entity.HasIndex(e => e.Role);
         });
         
         // Configuration de l'entité Score

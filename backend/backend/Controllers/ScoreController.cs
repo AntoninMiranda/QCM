@@ -10,7 +10,7 @@ namespace Backend.Controllers;
 
 [Authorize]
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class ScoreController : ControllerBase
 {
     private readonly ApplicationDbContext _context;

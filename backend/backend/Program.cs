@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -55,7 +56,7 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Description = "API pour gérer les QCM avec authentification JWT"
     });
-    
+
     // Configuration pour supporter JWT dans Swagger
     c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
     {
@@ -137,11 +138,14 @@ using (var scope = app.Services.CreateScope())
 
 
 // Configuration de Swagger UI
-app.UseSwagger();
+app.UseSwagger(c =>
+{
+    c.RouteTemplate = "swagger/{documentName}/swagger.json";
+});
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "QCM API V1");
-    c.RoutePrefix = "swagger"; // URL: http://localhost:5000/swagger
+    c.RoutePrefix = "swagger"; // URL: http://localhost:5000/api/swagger
 });
 
 // app.UseHttpsRedirection();

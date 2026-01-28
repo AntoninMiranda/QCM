@@ -3,7 +3,7 @@
 namespace Backend.Controllers;
 
 [ApiController]
-[Route("/")]
+[Route("api/")]
 public class BaseController : ControllerBase
 {
     [HttpGet]

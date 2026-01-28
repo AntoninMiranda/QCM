@@ -6,12 +6,14 @@ CREATE TABLE IF NOT EXISTS "Users" (
     "PasswordHash" TEXT NOT NULL,
     "FirstName" VARCHAR(100),
     "LastName" VARCHAR(100),
+    "Role" VARCHAR(50) NOT NULL DEFAULT 'User',
     "CreatedAt" TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT NOW(),
     "UpdatedAt" TIMESTAMP WITH TIME ZONE
 );
 
 CREATE UNIQUE INDEX IF NOT EXISTS "IX_Users_Email" ON "Users" ("Email");
 CREATE UNIQUE INDEX IF NOT EXISTS "IX_Users_Username" ON "Users" ("Username");
+CREATE INDEX IF NOT EXISTS "IX_Users_Role" ON "Users" ("Role");
 
 -- Création de la table Scores
 CREATE TABLE IF NOT EXISTS "Scores" (
@@ -41,10 +43,10 @@ CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
 
 -- Enregistrement des migrations
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion") 
-VALUES ('20251126000000_AddUserAuthentication', '9.0.0') 
+VALUES ('20251126231637_InitialCreate', '9.0.0') 
 ON CONFLICT DO NOTHING;
 
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion") 
-VALUES ('20251126210000_AddScoreTable', '9.0.0') 
+VALUES ('20251128000000_AddUserRole', '9.0.0') 
 ON CONFLICT DO NOTHING;
 

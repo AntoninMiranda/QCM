@@ -13,7 +13,7 @@ using BCrypt.Net;
 namespace Backend.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
     private readonly ApplicationDbContext _context;
@@ -184,7 +184,8 @@ public class AuthController : ControllerBase
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Name, user.Username)
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Role, user.Role)
         };
 
         var token = new JwtSecurityToken(
@@ -213,6 +214,7 @@ public class AuthController : ControllerBase
             Email = user.Email,
             FirstName = user.FirstName,
             LastName = user.LastName,
+            Role = user.Role,
             CreatedAt = user.CreatedAt
         };
     }
