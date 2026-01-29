@@ -54,15 +54,17 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
     // Initialiser les réponses pour la page actuelle
     useEffect(() => {
         if (data.length > 0 && data[currentIndex]) {
-            setResult({ score: result.score, total: data.flat().length });
-            setSelectedAnswers(new Array(data[currentIndex].length).fill(null));
+            // Calculer le total de toutes les questions dans tous les groupes
+            const totalQuestions = data.reduce((sum: number, group: QcmQuestionGroup) => sum + group.questions.length, 0);
+            setResult({ score: result.score, total: totalQuestions });
+            setSelectedAnswers(new Array(data[currentIndex].questions.length).fill(null));
             setValidated(false);
         }
     }, [data, currentIndex]);
 
 
     const handleSetSelected = (index: number, value: string) => {
-        setSelectedAnswers(prev => {
+        setSelectedAnswers((prev: (string | null)[]) => {
             const newAnswers = [...prev];
             newAnswers[index] = value;
             return newAnswers;
@@ -73,7 +75,8 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         setValidated(true);
         let correctAnswers = 0;
 
-        const pageDetails = data[currentIndex].map((question, index) => {
+        const currentGroup = data[currentIndex];
+        const pageDetails = currentGroup.questions.map((question: QcmQuestion, index: number) => {
             const isCorrect = selectedAnswers[index] === question.answer;
             if (isCorrect) correctAnswers++;
 
@@ -90,7 +93,7 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         const newScore = result.score + correctAnswers;
 
         setQuestionDetails(newQuestionDetails);
-        setResult(prev => ({
+        setResult((prev: QcmResult) => ({
             score: newScore,
             total: prev.total
         }));
@@ -106,7 +109,7 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         if (currentIndex + 1 >= data.length) {
             setShowResult(true);
         } else {
-            setCurrentIndex((prev) => prev + 1);
+            setCurrentIndex((prev: number) => prev + 1);
         }
     };
 
@@ -148,7 +151,8 @@ export function useQcmLogic({ qcmType, qcmCategory, qcmCount }: UseQcmLogicProps
         setCurrentIndex(0);
         setSelectedAnswers([]);
         setValidated(false);
-        setResult({ score: 0, total: data.flat().length });
+        const totalQuestions = data.reduce((sum: number, group: QcmQuestionGroup) => sum + group.questions.length, 0);
+        setResult({ score: 0, total: totalQuestions });
         setStartTime(Date.now());
         setQuestionDetails([]);
         setIsSavingScore(false);

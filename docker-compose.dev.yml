@@ -25,7 +25,7 @@
       target: development
     container_name: qcm-backend-dev
     ports:
-      - "5079:5000"  # Port différent de la prod (5000)
+      - "5079:5079"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:5079
@@ -46,9 +46,9 @@
       target: development
     container_name: qcm-frontend-dev
     ports:
-      - "3001:3000"  # Port différent de la prod (3000)
+      - "3000:3000"  # Port différent de la prod (3000)
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:5079
+      - NEXT_PUBLIC_API_URL=http://localhost:5079/api
       - NODE_ENV=development
       - DEBUG=*
     networks:

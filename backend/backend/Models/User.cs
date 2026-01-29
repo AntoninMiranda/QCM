@@ -27,7 +27,7 @@ public class User
     
     [Required]
     [MaxLength(50)]
-    public string Role { get; set; } = "User";
+    public string Role { get; set; } = UserRoles.User;
     
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     

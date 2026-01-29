@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Backend.Data;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,7 +50,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "QCM API",
         Version = "v1",
@@ -58,27 +58,27 @@ builder.Services.AddSwaggerGen(c =>
     });
 
     // Configuration pour supporter JWT dans Swagger
-    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme. Example: \"Bearer {token}\"",
         Name = "Authorization",
-        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.ApiKey,
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
     
-    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            new OpenApiSecurityScheme
             {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                Reference = new OpenApiReference
                 {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Type = ReferenceType.SecurityScheme,
                     Id = "Bearer"
                 }
             },
-            Array.Empty<string>()
+            new string[] {}
         }
     });
 });
@@ -90,22 +90,22 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
-    
+
     // Retry logic pour attendre que PostgreSQL soit prêt
     var maxRetries = 15;
     var delay = TimeSpan.FromSeconds(3);
-    
+
     for (int i = 0; i < maxRetries; i++)
     {
         try
         {
             logger.LogInformation($"Tentative de connexion à la base de données ({i + 1}/{maxRetries})...");
-            
+
             // Test de connexion
             if (dbContext.Database.CanConnect())
             {
                 logger.LogInformation("Connexion à la base de données réussie");
-                
+
                 // Appliquer les migrations
                 dbContext.Database.Migrate();
                 logger.LogInformation("✅ Migrations appliquées avec succès");
@@ -123,13 +123,13 @@ using (var scope = app.Services.CreateScope())
         catch (Exception ex)
         {
             logger.LogError(ex, $"Erreur lors de la tentative {i + 1}/{maxRetries}: {ex.Message}");
-            
+
             if (i == maxRetries - 1)
             {
                 logger.LogError("❌ Échec de la connexion après toutes les tentatives");
                 throw;
             }
-            
+
             logger.LogInformation($"⏳ Nouvelle tentative dans {delay.TotalSeconds} secondes...");
             Thread.Sleep(delay);
         }
@@ -137,16 +137,26 @@ using (var scope = app.Services.CreateScope())
 }
 
 
-// Configuration de Swagger UI
-app.UseSwagger(c =>
+// Configuration du pipeline HTTP
+if (app.Environment.IsDevelopment())
 {
-    c.RouteTemplate = "swagger/{documentName}/swagger.json";
-});
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "QCM API V1");
-    c.RoutePrefix = "swagger"; // URL: http://localhost:5000/api/swagger
-});
+    app.UseSwagger(c =>
+    {
+        c.RouteTemplate = "swagger/{documentName}/swagger.json";
+    });
+    
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "QCM API V1");
+        c.RoutePrefix = "swagger"; // URL: http://localhost:5079/swagger
+        c.DocumentTitle = "QCM API Documentation";
+        c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.List);
+        c.DefaultModelsExpandDepth(-1);
+        c.EnableDeepLinking();
+        c.EnableFilter();
+        c.DisplayRequestDuration();
+    });
+}
 
 // app.UseHttpsRedirection();
 

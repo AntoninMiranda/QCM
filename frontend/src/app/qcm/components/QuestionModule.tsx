@@ -3,9 +3,10 @@
 
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { QcmQuestion } from "../types";
 
 interface QuestionModuleProps {
-    question: any;
+    question: QcmQuestion;
     selected: string | null;
     setSelected: (index: number, key: string) => void;
     validated: boolean;

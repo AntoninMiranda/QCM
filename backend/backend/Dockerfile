@@ -1,22 +1,26 @@
 ﻿# Stage de développement avec hot reload
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS development
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS development
 WORKDIR /src
-EXPOSE 5000
+EXPOSE 5079
 # Copier le projet et restaurer les dépendances
 COPY ["backend.csproj", "./"]
 RUN dotnet restore "backend.csproj"
 COPY . .
-# Installer dotnet-ef en tant que package local si nécessaire
+# Installer dotnet-ef globalement
+RUN dotnet tool install --global dotnet-ef
 ENV PATH="${PATH}:/root/.dotnet/tools"
-CMD ["dotnet", "watch", "run", "--urls", "http://0.0.0.0:5000"]
+CMD ["dotnet", "watch", "run", "--no-launch-profile"]
 
 # Stage de base pour la production
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 5000
+# Installer dotnet-ef pour les migrations en production si nécessaire
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="${PATH}:/root/.dotnet/tools"
 
 # Stage de build pour la production
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["backend.csproj", "./"]

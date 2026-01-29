@@ -92,7 +92,7 @@ function QcmPageContent() {
                             {error && <p className="text-red-500 mb-4">Erreur: {error}</p>}
                             {!showResult && data.length > 0 && data[currentIndex] ? (
                                 <QcmModule
-                                    questions={data[currentIndex]}
+                                    questionGroup={data[currentIndex]}
                                     selectedAnswers={selectedAnswers}
                                     setSelectedAnswer={handleSetSelected}
                                     validated={validated}
