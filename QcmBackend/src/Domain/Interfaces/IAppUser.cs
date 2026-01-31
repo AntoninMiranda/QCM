@@ -1,0 +1,12 @@
+using System;
+
+namespace QcmBackend.Domain.Interfaces;
+
+public interface IAppUser
+{
+    Guid Id { get; set; }
+    string? Email { get; set; }
+    string FirstName { get; set; }
+    string LastName { get; set; }
+    DateTimeOffset CreatedAt { get; set; }
+}

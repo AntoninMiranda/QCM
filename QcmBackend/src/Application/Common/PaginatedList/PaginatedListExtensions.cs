@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+
+namespace QcmBackend.Application.Common.PaginatedList
+{
+    public static class PaginatedListExtensions
+    {
+        public static Task<PaginatedList<TDestination>> ToPaginatedListAsync<TDestination>(this IQueryable<TDestination> queryable, IPaginable paginatable, CancellationToken cancellationToken = default) where TDestination : class
+        {
+            return PaginatedList<TDestination>.CreateAsync(queryable.AsNoTracking(), paginatable.PageNumber, paginatable.PageSize, cancellationToken);
+        }
+
+        public static PaginatedList<TDestination> MapPaginated<TDestination, TSource>(this IMapper mapper, PaginatedList<TSource> source, Func<TSource, Action<IMappingOperationOptions>>? opts = null)
+        {
+            List<TDestination> items = new(source.Items.Count);
+
+            foreach (TSource item in source.Items)
+            {
+                Action<IMappingOperationOptions>? mappingOptions = opts?.Invoke(item);
+
+                TDestination mapped = mappingOptions == null
+                    ? mapper.Map<TDestination>(item)
+                    : mapper.Map<TDestination>(item, mappingOptions);
+
+                items.Add(mapped);
+            }
+
+            return new PaginatedList<TDestination>
+            {
+                PageNumber = source.PageNumber,
+                TotalPages = source.TotalPages,
+                TotalCount = source.TotalCount,
+                Items = items
+            };
+        }
+    }
+}
