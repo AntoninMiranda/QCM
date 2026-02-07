@@ -7,11 +7,8 @@ using QcmBackend.Infrastructure.Identity;
 namespace QcmBackend.Infrastructure.Data
 {
     // DbContext de base pour EF Core et Identity
-    public class AppDbContext : IdentityDbContext<AppUser, IdentityRole<string>, string>, IAppDbContext
+    public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbContext<AppUser, IdentityRole<Guid>, Guid>(options), IAppDbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

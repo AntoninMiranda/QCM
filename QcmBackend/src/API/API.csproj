@@ -30,7 +30,6 @@
   <ItemGroup>
     <Folder Include="EventHandlers\" />
     <Folder Include="Hubs\" />
-    <Folder Include="Requests\" />
   </ItemGroup>
 
 </Project>

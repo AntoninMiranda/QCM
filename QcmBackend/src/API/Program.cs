@@ -32,7 +32,6 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 AuthSettings jwtSettings = builder.Configuration.GetSection("Auth").Get<AuthSettings>()!;
-JwtSettings jwtConfig = builder.Configuration.GetSection("Jwt").Get<JwtSettings>()!;
 GeneralSettings generalSettings = builder.Configuration.GetSection("General").Get<GeneralSettings>()!;
 
 if (builder.Environment.IsDevelopment() || builder.Environment.IsEnvironment("RemoteDevelopment"))
@@ -139,11 +138,11 @@ builder.Services.AddAuthentication(options =>
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtConfig.Secret)),
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SigningKey)),
             ValidateIssuer = true,
-            ValidIssuer = jwtConfig.Issuer,
+            ValidIssuer = jwtSettings.ValidIssuer,
             ValidateAudience = true,
-            ValidAudience = jwtConfig.Audience,
+            ValidAudience = jwtSettings.ValidAudience,
             ValidateLifetime = true,
             ClockSkew = TimeSpan.Zero
         };

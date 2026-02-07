@@ -20,8 +20,10 @@ public static class ConfigureServices
     public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration, IWebHostEnvironment environment)
     {
         // 1. Configuration des settings
+        services.Configure<AccountSettings>(configuration.GetSection("Account"));
         services.Configure<AuthSettings>(configuration.GetSection("Auth"));
-        services.Configure<JwtSettings>(configuration.GetSection("Jwt"));
+        services.Configure<GeneralSettings>(configuration.GetSection("General"));
+        services.Configure<SecuritySettings>(configuration.GetSection("Security"));
         // ...autres settings...
 
         // 2. HttpClient
@@ -46,16 +48,16 @@ public static class ConfigureServices
         services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
 
         // 5. Services d’infrastructure
-        services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
-        // services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IUser, CurrentUser>();
+        services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IIdentityService, IdentityService>();
+        services.AddScoped<ICookieService, CookieService>();
         // ...autres services...
 
         // 6. Identity
-        services.AddIdentityCore<AppUser>(options => { /* options */ })
-            .AddRoles<IdentityRole>()
+        services.AddIdentity<AppUser, IdentityRole<Guid>>(options => { /* options */ })
             .AddEntityFrameworkStores<AppDbContext>()
-            .AddSignInManager()
             .AddDefaultTokenProviders();
 
         // 7. Hosted services, utilitaires, etc.

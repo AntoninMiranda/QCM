@@ -2,23 +2,19 @@ using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
+using QcmBackend.Application.Common.Interfaces;
 
 namespace QcmBackend.Application.Common.Behaviors
 {
-    public class LoggingBehavior<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
+    public class LoggingBehavior<TRequest>(ILogger<TRequest> logger, IUser userContext) : IRequestPreProcessor<TRequest> where TRequest : notnull
     {
-        private readonly ILogger<TRequest> _logger;
-
-        public LoggingBehavior(ILogger<TRequest> logger)
+        public Task Process(TRequest request, CancellationToken cancellationToken = default)
         {
-            _logger = logger;
-        }
+            string requestName = typeof(TRequest).Name;
+            Guid userId = userContext.UserId;
 
-        public Task Process(TRequest request, CancellationToken cancellationToken)
-        {
-            var name = typeof(TRequest).Name;
-
-            _logger.LogInformation("QcmBackend Request: {Name} {@Request}", name, request);
+            logger.LogInformation("CleanArchitecture Request: {Name} {@UserId} {@Request}",
+                requestName, userId, request);
 
             return Task.CompletedTask;
         }

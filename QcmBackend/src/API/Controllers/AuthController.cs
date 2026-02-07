@@ -1,59 +1,54 @@
 using System.Threading.Tasks;
 using Asp.Versioning;
 using MediatR;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.RateLimiting;
 using QcmBackend.API.Common.Attributes;
+using QcmBackend.API.Requests.Auth;
+using QcmBackend.API.Common.Extensions;
+using QcmBackend.Application.Common.Result;
+using QcmBackend.Application.Features.Auth.Commands.LoginCommand;
+using QcmBackend.Application.Features.Auth.Commands.RegisterCommand;
 using QcmBackend.Application.Features.Auth.Dtos;
-using QcmBackend.Application.Features.Auth;
-using QcmBackend.Application.Features.Auth.Commands;
 
-namespace QcmBackend.API.Controllers
+using LoginRequest = QcmBackend.API.Requests.Auth.LoginRequest;
+using RegisterRequest = QcmBackend.API.Requests.Auth.RegisterRequest;
+
+namespace QcmBackend.API.Controllers;
+
+[ApiController]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
+[AllowAnonymous]
+[EnableRateLimiting("auth")]
+public class AuthController(IMediator mediator, IMapper mapper) : BaseController
 {
-    [ApiController]
-    [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
-    [EnableRateLimiting("auth")]
-    public class AuthController : ControllerBase
+    [HttpPost("register")]
+    public async Task<IActionResult> Register([FromBody] RegisterRequest request)
     {
-        private readonly IMediator _mediator;
+        RegisterCommand command = mapper.Map<RegisterCommand>(request);
 
-        public AuthController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        Result result = await mediator.Send(command);
 
-        [HttpPost("register")]
-        [ProducesResponseType(typeof(AuthResponse), 200)]
-        [ProducesResponseType(400)]
-        public async Task<IActionResult> Register([FromBody] RegisterRequest request)
-        {
-            var command = new RegisterCommand
-            {
-                Email = request.Email,
-                Password = request.Password,
-                FirstName = request.FirstName,
-                LastName = request.LastName,
-                Role = request.Role
-            };
+        return result.Match(
+            onSuccess: NoContent,
+            onFailure: Problem
+        );
+    }
 
-            var result = await _mediator.Send(command);
-            return Ok(result);
-        }
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginRequest request)
+    {
+        LoginCommand command = mapper.Map<LoginCommand>(request);
 
-        [HttpPost("login")]
-        [ProducesResponseType(typeof(AuthResponse), 200)]
-        [ProducesResponseType(401)]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
-        {
-            var command = new LoginCommand
-            {
-                Email = request.Email,
-                Password = request.Password
-            };
+        Result<ReadTokenDto> result = await mediator.Send(command);
 
-            var result = await _mediator.Send(command);
-            return Ok(result);
-        }
+        return result.Match(
+            onSuccess: Ok,
+            onFailure: Problem
+        );
     }
 }

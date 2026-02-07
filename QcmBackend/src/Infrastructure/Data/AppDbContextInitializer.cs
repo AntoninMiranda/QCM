@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using QcmBackend.Application.Common.Interfaces;
 using QcmBackend.Infrastructure.Identity;
+using QcmBackend.Application.Common.Settings;
 
 namespace QcmBackend.Infrastructure.Data
 {
@@ -15,14 +16,16 @@ namespace QcmBackend.Infrastructure.Data
         private static async Task SeedAsync(IServiceScope scope, AppDbContextInitializer initialiser)
         {
             UserManager<AppUser> userManager = scope.ServiceProvider.GetRequiredService<UserManager<AppUser>>();
-            // IUser userContext = scope.ServiceProvider.GetRequiredService<IUser>();
+            IUser userContext = scope.ServiceProvider.GetRequiredService<IUser>();
+
+            await initialiser.SeedAccountAsync();
 
             string adminEmail = "admin@example.com";
             AppUser? adminUser = await userManager.FindByEmailAsync(adminEmail) ?? throw new Exception("Admin user not found!");
 
             // using (userContext.BeginScope(adminUser.Id))
             // {
-                await initialiser.SeedAsync();
+            //     await initialiser.SeedAsync();
             // }
         }
 
@@ -34,7 +37,7 @@ namespace QcmBackend.Infrastructure.Data
 
             await initialiser.InitialiseAsync();
 
-            // await initialiser.SeedUsersAsync();
+            await initialiser.SeedAccountAsync();
 
             await SeedAsync(scope, initialiser);
         }
@@ -45,74 +48,61 @@ namespace QcmBackend.Infrastructure.Data
 
             AppDbContextInitializer initialiser = scope.ServiceProvider.GetRequiredService<AppDbContextInitializer>();
 
-            // await initialiser.SeedUsersAsync();
+            await initialiser.SeedAccountAsync();
 
             await SeedAsync(scope, initialiser);
         }
     }
     
-    // Utilisé pour initialiser la base au démarrage (migrations, seed)
-    
-    public class AppDbContextInitializer
+    public class AppDbContextInitializer(ILogger<AppDbContextInitializer> logger, AppDbContext context, UserManager<AppUser> userManager, RoleManager<IdentityRole<Guid>> roleManager)
     {
-        private readonly ILogger<AppDbContextInitializer> _logger;
-        private readonly AppDbContext _context;
-        private readonly UserManager<AppUser> _userManager;
-        private readonly RoleManager<IdentityRole> _roleManager;
-
-        public AppDbContextInitializer(ILogger<AppDbContextInitializer> logger, AppDbContext context, UserManager<AppUser> userManager, RoleManager<IdentityRole> roleManager)
-        {
-            _logger = logger;
-            _context = context;
-            _userManager = userManager;
-            _roleManager = roleManager;
-        }
-
         public async Task InitialiseAsync()
         {
             try
             {
-                await _context.Database.MigrateAsync(); // Applique les migrations
+                await context.Database.MigrateAsync(); // Applique les migrations
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while initialising the database.");
+                logger.LogError(ex, "An error occurred while initialising the database.");
                 throw;
             }
         }
 
-        public async Task SeedAsync()
+        public async Task SeedAccountAsync()
         {
             try
             {
                 await SeedRolesAsync();
-                await SeedAdminUserAsync();
+                await SeedAdminAccountAsync();
+                await SeedUserAccountAsync();
                 // Ajoute ici tes données de seed si besoin
-                await _context.SaveChangesAsync();
+                await context.SaveChangesAsync();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred while seeding the database.");
+                logger.LogError(ex, "An error occurred while seeding the database.");
                 throw;
             }
         }
 
         private async Task SeedRolesAsync()
         {
-            if (!await _roleManager.RoleExistsAsync("Admin"))
+            string[] roleNames = ["Admin", "User"];
+
+            foreach (string roleName in roleNames)
             {
-                await _roleManager.CreateAsync(new IdentityRole("Admin"));
-            }
-            if (!await _roleManager.RoleExistsAsync("User"))
-            {
-                await _roleManager.CreateAsync(new IdentityRole("User"));
+                if (!await roleManager.RoleExistsAsync(roleName))
+                {
+                    _ = await roleManager.CreateAsync(new IdentityRole<Guid>(roleName));
+                }
             }
         }
 
-        private async Task SeedAdminUserAsync()
+        private async Task SeedAdminAccountAsync()
         {
             var adminEmail = "admin@example.com";
-            var adminUser = await _userManager.FindByEmailAsync(adminEmail);
+            var adminUser = await userManager.FindByEmailAsync(adminEmail);
             if (adminUser == null)
             {
                 adminUser = new AppUser
@@ -120,12 +110,33 @@ namespace QcmBackend.Infrastructure.Data
                     UserName = adminEmail,
                     Email = adminEmail,
                     FirstName = "Admin",
-                    LastName = "User"
+                    LastName = "Account"
                 };
-                var result = await _userManager.CreateAsync(adminUser, "Admin123!");
+                var result = await userManager.CreateAsync(adminUser, "Admin123!");
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(adminUser, "Admin");
+                    await userManager.AddToRoleAsync(adminUser, "Admin");
+                }
+            }
+        }
+        
+        private async Task SeedUserAccountAsync()
+        {
+            var userEmail = "user@example.com";
+            var userUser = await userManager.FindByEmailAsync(userEmail);
+            if (userUser == null)
+            {
+                userUser = new AppUser
+                {
+                    UserName = userEmail,
+                    Email = userEmail,
+                    FirstName = "User",
+                    LastName = "Account"
+                };
+                var result = await userManager.CreateAsync(userUser, "User123!");
+                if (result.Succeeded)
+                {
+                    await userManager.AddToRoleAsync(userUser, "User");
                 }
             }
         }

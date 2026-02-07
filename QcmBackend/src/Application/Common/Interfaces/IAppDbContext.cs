@@ -17,10 +17,5 @@ namespace QcmBackend.Application.Common.Interfaces
     {
         IEnumerable<string> GetDescriptiveProperties();
     }
-
-    public interface IAuthService
-    {
-        Task<string> RegisterAsync(string email, string password, string firstName, string lastName, string role);
-        Task<AuthResponse> LoginAsync(string email, string password);
-    }
+    
 }

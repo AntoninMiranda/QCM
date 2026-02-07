@@ -1,7 +1,7 @@
-﻿namespace QcmBackend.Application.Common.Settings
+﻿namespace QcmBackend.Application.Common.Settings;
+
+public class GeneralSettings
 {
-    public class GeneralSettings
-    {
-        public required string FrontendUri { get; init; }
-    }
+    public required string FrontendUri { get; init; }
 }
+

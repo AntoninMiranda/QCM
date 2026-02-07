@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: qcmbackend_prod
+      POSTGRES_USER: qcmuser
+      POSTGRES_PASSWORD: ${DB_PASSWORD}  # Use environment variable for security
+    # No ports exposed in prod for security
+    volumes:
+      - postgres_prod_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qcmuser -d qcmbackend_prod"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__AppDb: Host=db;Database=qcmbackend_prod;Username=qcmuser;Password=${DB_PASSWORD}
+      # Set RUN_MIGRATIONS=true to apply migrations on startup (use with caution in production)
+      # Add other prod-specific env vars as needed
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres_prod_data:

@@ -1,0 +1,40 @@
+services:
+  qcm-db-dev:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: qcmbackend
+      POSTGRES_USER: qcmuser
+      POSTGRES_PASSWORD: qcmpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U qcmuser -d qcmbackend"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  qcm-api-dev:
+    build:
+      context: .
+      dockerfile: src/API/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+      ConnectionStrings__AppDb: Host=qcm-db-dev;Database=qcmbackend;Username=qcmuser;Password=qcmpassword
+      General__FrontendUri: http://localhost:3000
+      Auth__SigningKey: Xkg0YDF7UXsnZE9cdk9le3w0MmU1QTp5PEhlQHFGLEw=
+      Auth__ValidAudience: qcmbackend
+      Auth__ValidIssuer: qcmbackend
+      Auth__DefaultRefreshExpiresInDays: 1
+      Auth__ExpiresInMinutes: 15
+      Auth__RememberMeRefreshExpiresInDays: 30
+    depends_on:
+      qcm-db-dev:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
